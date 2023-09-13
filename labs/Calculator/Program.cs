@@ -66,7 +66,7 @@ class Program
             string op = Console.ReadLine();
 
             try
-            {
+            {             
                 result = CalculatorFunctions.DoOperation(cleanNum1, cleanNum2, op);
                 if (double.IsNaN(result.num))
                 {

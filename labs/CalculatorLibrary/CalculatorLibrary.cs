@@ -1,5 +1,4 @@
-﻿using Math;
-using System;
+﻿using System;
 
 namespace CalculatorLibrary
 {
