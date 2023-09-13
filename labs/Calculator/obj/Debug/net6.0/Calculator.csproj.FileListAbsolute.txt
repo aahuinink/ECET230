@@ -12,3 +12,21 @@ C:\Users\a_hui\OneDrive - Camosun College\school\fall_2023\ecet230_oop\labs\Calc
 C:\Users\a_hui\OneDrive - Camosun College\school\fall_2023\ecet230_oop\labs\Calculator\obj\Debug\net6.0\Calculator.pdb
 C:\Users\a_hui\OneDrive - Camosun College\school\fall_2023\ecet230_oop\labs\Calculator\obj\Debug\net6.0\Calculator.genruntimeconfig.cache
 C:\Users\a_hui\OneDrive - Camosun College\school\fall_2023\ecet230_oop\labs\Calculator\obj\Debug\net6.0\ref\Calculator.dll
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\bin\Debug\net6.0\Calculator.exe
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\bin\Debug\net6.0\Calculator.deps.json
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\bin\Debug\net6.0\Calculator.runtimeconfig.json
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\bin\Debug\net6.0\Calculator.dll
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\bin\Debug\net6.0\Calculator.pdb
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\bin\Debug\net6.0\CalculatorLibrary.dll
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\bin\Debug\net6.0\CalculatorLibrary.pdb
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\Calculator.csproj.AssemblyReference.cache
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\Calculator.AssemblyInfoInputs.cache
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\Calculator.AssemblyInfo.cs
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\Calculator.csproj.CopyComplete
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\Calculator.dll
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\refint\Calculator.dll
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\Calculator.pdb
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\Calculator.genruntimeconfig.cache
+C:\Users\C0520296\source\repos\ECET230\labs\Calculator\obj\Debug\net6.0\ref\Calculator.dll
