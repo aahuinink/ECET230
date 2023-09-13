@@ -44,6 +44,7 @@ class Program
 
             // Ask the user to type the second number.
             Console.Write("Type another number, and then press Enter: ");
+
             numInput2 = Console.ReadLine();
 
             double cleanNum2 = 0;
@@ -70,7 +71,13 @@ class Program
                 {
                     Console.WriteLine("This operation will result in a mathematical error.\n");
                 }
-                else Console.WriteLine("Your result: {0:0.##}\n", result);
+                else
+                {
+                    Console.WriteLine($"Your result:");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"{cleanNum1} {result.oper} {cleanNum2} = {result.num}");
+                    Console.ResetColor();
+                }
             }
             catch (Exception e)
             {

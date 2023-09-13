@@ -38,6 +38,10 @@
                     result.num = num1 / num2;
                     result.oper = "/";
                     break;
+                case "e":
+                    result.num = Math.Pow(num1, num2);
+                    result.oper = "^";
+
                 // Return text for an incorrect option entry.
                 default:
                     break;
