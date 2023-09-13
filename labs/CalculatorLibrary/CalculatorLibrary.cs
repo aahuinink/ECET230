@@ -1,4 +1,7 @@
-﻿namespace CalculatorLibrary
+﻿using Math;
+using System;
+
+namespace CalculatorLibrary
 {
     public struct CalcOutput
     {
