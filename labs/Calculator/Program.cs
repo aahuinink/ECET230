@@ -2,8 +2,12 @@
 
 // Declare variables and then initialize to zero.
 using System;
+using Calculator;
 
-double num1 = 0; double num2 = 0;
+namespace Calculator
+
+// declare variables and initialize to 0 or empty
+double num1 = 0; double num2 = 0; string op = "";
 
 // Display title as the C# console calculator app.
 Console.WriteLine(@"
@@ -43,40 +47,9 @@ Console.WriteLine("\ts - Subtract");
 Console.WriteLine("\tm - Multiply");
 Console.WriteLine("\td - Divide");
 Console.Write("Your option? ");
+string op = Console.ReadLine();
 
-// Use a switch statement to do the math.
-switch (Console.ReadLine())
-{
-    case "a":
-        Console.Write($"Your result: {num1} + {num2} = ");
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine(num1 + num2);
-        Console.ResetColor();
-        break;
-    case "s":
-        Console.Write($"Your result: {num1} - {num2} = ");
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine(num1 - num2);
-        Console.ResetColor();
-        break;
-    case "m":
-        Console.Write($"Your result: {num1} * {num2} = ");
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine(num1 * num2);
-        Console.ResetColor();
-        break;
-    case "d":
-        while (num2 == 0)
-        {
-            Console.WriteLine("Please enter a non-zero divisor!");
-            num2 = Convert.ToDouble(Console.ReadLine());
-        }
-        Console.Write($"Your result: {num1} / {num2} = ");
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine(num1 / num2);
-        Console.ResetColor();
-        break;
-}
+Calculator.
 // Wait for the user to respond before closing.
 Console.Write("Press any key to close the Calculator console app...");
 Console.ReadKey();
