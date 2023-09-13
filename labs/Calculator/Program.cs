@@ -6,6 +6,9 @@ using System;
 // declare variables and initialize to 0 or empty
 double num1 = 0; double num2 = 0; string op = "";
 
+// declare variables and initialize to 0 or empty
+double num1 = 0; double num2 = 0; string op = "";
+
 // Display title as the C# console calculator app.
 Console.WriteLine(@"
     _________                            .__                          
