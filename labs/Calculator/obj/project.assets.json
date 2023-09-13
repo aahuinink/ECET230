@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "CalculatorLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CalculatorLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalculatorLibrary.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CalculatorLibrary/1.0.0": {
+      "type": "project",
+      "path": "../CalculatorLibrary/CalculatorLibrary.csproj",
+      "msbuildProject": "../CalculatorLibrary/CalculatorLibrary.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "CalculatorLibrary >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\C0520296\\.nuget\\packages\\": {},
@@ -14,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\C0520296\\Source\\Repos\\ECET230\\labs\\Calculator\\Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\Calculator\\Calculator.csproj",
       "projectName": "Calculator",
-      "projectPath": "C:\\Users\\C0520296\\Source\\Repos\\ECET230\\labs\\Calculator\\Calculator.csproj",
-      "packagesPath": "C:\\Users\\C0520296\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\C0520296\\Source\\Repos\\ECET230\\labs\\Calculator\\obj\\",
+      "projectPath": "C:\\Users\\a_hui\\OneDrive - Camosun College\\school\\fall_2023\\ecet230_oop\\labs\\Calculator\\Calculator.csproj",
+      "packagesPath": "C:\\Users\\a_hui\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\a_hui\\OneDrive - Camosun College\\school\\fall_2023\\ecet230_oop\\labs\\Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,7 +58,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\CalculatorLibrary\\CalculatorLibrary.csproj": {
+              "projectPath": "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\CalculatorLibrary\\CalculatorLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
