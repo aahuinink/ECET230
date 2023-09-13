@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\Calculator\\Calculator.csproj",
-      "projectName": "Calculator",
-      "projectPath": "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\Calculator\\Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\Libraries\\CalculatorLibrary\\CalculatorLibrary.csproj",
+      "projectName": "CalculatorLibrary",
+      "projectPath": "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\Libraries\\CalculatorLibrary\\CalculatorLibrary.csproj",
       "packagesPath": "C:\\Users\\C0520296\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\Calculator\\obj\\",
+      "outputPath": "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\Libraries\\CalculatorLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
