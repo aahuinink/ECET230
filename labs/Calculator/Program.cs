@@ -1,98 +1,104 @@
 ﻿using CalculatorLibrary;
 
-class Program
-{
-    static void Main(string[] args)
+namespace CalculatorProgram
+{ }
+    class Program
     {
-        bool endApp = false;
-        // Display title as the C# console calculator app.
-        Console.WriteLine(@"
-        _________                            .__                          
-        \_   ___ \  ____   ____   __________ |  |   ____                  
-        /    \  \/ /  _ \ /    \ /  ___/  _ \|  | _/ __ \                 
-        \     \___(  <_> )   |  \\___ (  <_> )  |_\  ___/                 
-         \______  /\____/|___|  /____  >____/|____/\___  >                
-                \/            \/     \/                \/                 
-        _________        .__               .__          __                
-        \_   ___ \_____  |  |   ____  __ __|  | _____ _/  |_  ___________ 
-        /    \  \/\__  \ |  | _/ ___\|  |  \  | \__  \\   __\/  _ \_  __ \
-        \     \____/ __ \|  |_\  \___|  |  /  |__/ __ \|  | (  <_> )  | \/
-         \______  (____  /____/\___  >____/|____(____  /__|  \____/|__|   
-                \/     \/          \/                \/                  
+        static void Main(string[] args)
+        {
+            bool endApp = false;
+            // Display title as the C# console calculator app.
+            Console.WriteLine(@"
+            _________                            .__                          
+            \_   ___ \  ____   ____   __________ |  |   ____                  
+            /    \  \/ /  _ \ /    \ /  ___/  _ \|  | _/ __ \                 
+            \     \___(  <_> )   |  \\___ (  <_> )  |_\  ___/                 
+             \______  /\____/|___|  /____  >____/|____/\___  >                
+                    \/            \/     \/                \/                 
+            _________        .__               .__          __                
+            \_   ___ \_____  |  |   ____  __ __|  | _____ _/  |_  ___________ 
+            /    \  \/\__  \ |  | _/ ___\|  |  \  | \__  \\   __\/  _ \_  __ \
+            \     \____/ __ \|  |_\  \___|  |  /  |__/ __ \|  | (  <_> )  | \/
+             \______  (____  /____/\___  >____/|____(____  /__|  \____/|__|   
+                    \/     \/          \/                \/                  
    
 
-    By Aaron Huinink - C0520296
-                ");
+        By Aaron Huinink - C0520296
+                    ");
 
-        while (!endApp)
-        {
-            // Declare variables and set to empty.
-            string numInput1 = "";
-            string numInput2 = "";
-            CalcOutput result;
-
-            // Ask the user to type the first number.
-            Console.Write("Type a number, and then press Enter: ");
-            numInput1 = Console.ReadLine();
-
-            double cleanNum1 = 0;
-            while (!double.TryParse(numInput1, out cleanNum1))
+            while (!endApp)
             {
-                Console.Write("This is not valid input. Please enter an integer value: ");
+                // Declare variables and set to empty.
+                string numInput1 = "";
+                string numInput2 = "";
+                CalcOutput result;
+
+                // create a log file
+                Calculator calculator = new Calculator();
+
+                // Ask the user to type the first number.
+                Console.Write("Type a number, and then press Enter: ");
                 numInput1 = Console.ReadLine();
-            }
 
-            // Ask the user to type the second number.
-            Console.Write("Type another number, and then press Enter: ");
+                double cleanNum1 = 0;
+                while (!double.TryParse(numInput1, out cleanNum1))
+                {
+                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    numInput1 = Console.ReadLine();
+                }
 
-            numInput2 = Console.ReadLine();
+                // Ask the user to type the second number.
+                Console.Write("Type another number, and then press Enter: ");
 
-            double cleanNum2 = 0;
-            while (!double.TryParse(numInput2, out cleanNum2))
-            {
-                Console.Write("This is not valid input. Please enter an integer value: ");
                 numInput2 = Console.ReadLine();
-            }
 
-            // Ask the user to choose an operator.
-            Console.WriteLine("Choose an operator from the following list:");
-            Console.WriteLine("\ta - Add");
-            Console.WriteLine("\ts - Subtract");
-            Console.WriteLine("\tm - Multiply");
-            Console.WriteLine("\td - Divide");
-            Console.WriteLine("\te - Exponent");
-            Console.Write("Your option? ");
-
-            string op = Console.ReadLine();
-
-            try
-            {             
-                result = CalculatorFunctions.DoOperation(cleanNum1, cleanNum2, op);
-                if (double.IsNaN(result.num))
+                double cleanNum2 = 0;
+                while (!double.TryParse(numInput2, out cleanNum2))
                 {
-                    Console.WriteLine("This operation will result in a mathematical error.\n");
+                    Console.Write("This is not valid input. Please enter an integer value: ");
+                    numInput2 = Console.ReadLine();
                 }
-                else
+
+                // Ask the user to choose an operator.
+                Console.WriteLine("Choose an operator from the following list:");
+                Console.WriteLine("\ta - Add");
+                Console.WriteLine("\ts - Subtract");
+                Console.WriteLine("\tm - Multiply");
+                Console.WriteLine("\td - Divide");
+                Console.WriteLine("\te - Exponent");
+                Console.Write("Your option? ");
+
+                string op = Console.ReadLine();
+
+                try
                 {
-                    Console.WriteLine($"Your result:");
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"{cleanNum1} {result.oper} {cleanNum2} = {result.num}");
-                    Console.ResetColor();
+                    result = CalculatorFunctions.DoOperation(cleanNum1, cleanNum2, op);
+                    if (double.IsNaN(result.num))
+                    {
+                        Console.WriteLine("This operation will result in a mathematical error.\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Your result:");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine($"{cleanNum1} {result.oper} {cleanNum2} = {result.num}");
+                        Console.ResetColor();
+                    }
                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
+                }
+
+                Console.WriteLine("------------------------\n");
+
+                // Wait for the user to respond before closing.
+                Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
+                if (Console.ReadLine() == "n") endApp = true;
+
+                Console.WriteLine("\n"); // Friendly linespacing.
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
-            }
-
-            Console.WriteLine("------------------------\n");
-
-            // Wait for the user to respond before closing.
-            Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
-            if (Console.ReadLine() == "n") endApp = true;
-
-            Console.WriteLine("\n"); // Friendly linespacing.
+            return;
         }
-        return;
     }
 }
