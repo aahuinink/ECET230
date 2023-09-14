@@ -1,0 +1,22 @@
+{
+  "Operations": [
+    {
+      "Operand1": 2.0,
+      "Operand2": 2.0,
+      "Operation": "Exponent",
+      "Result": 4.0
+    },
+    {
+      "Operand1": 4.0,
+      "Operand2": 5.0,
+      "Operation": "Add",
+      "Result": 9.0
+    },
+    {
+      "Operand1": 4.0,
+      "Operand2": 4.0,
+      "Operation": "Divide",
+      "Result": 1.0
+    }
+  ]
+}
