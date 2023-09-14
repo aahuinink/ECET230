@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using Newtonsoft.json;
+using Newtonsoft.Json;
 
 namespace CalculatorLibrary
 {
@@ -29,7 +29,7 @@ namespace CalculatorLibrary
 
         public CalcOutput DoOperation(double num1, double num2, string op)
         {
-            double result = double.NaN; // Default value is "not-a-number" if an operation, such as division, could result in an error.
+            CalcOutput result = new CalcOutput();
             writer.WriteStartObject();
             writer.WritePropertyName("Operand1");
             writer.WriteValue(num1);
@@ -80,5 +80,12 @@ namespace CalculatorLibrary
             writer.WriteEndObject();
             return result;
          }
+
+        public void Finish()
+        {
+            writer.WriteEndArray();
+            writer.WriteEndObject();
+            writer.Close();
+        }
     }
 }
