@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M63aRNmsgU8zNWaXefh5xeQE46tvh6vohgPszkqbTq9k/WQ06WXbiO84FPUs5LAFSyFqT1iw4KWPM1+0hlXY9w==",
+  "dgSpecHash": "j9+WHMwCm8QW9xOLyR7dg7BnFtHazXyLXGZUafSutoK8rjM9weagjMzHPUqzr/UPLznHNrv/2G+H5ZF33WW6pg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\C0520296\\source\\repos\\ECET230\\labs\\Calculator\\Calculator.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\C0520296\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\a_hui\\source\\repos\\ECET230\\labs\\Calculator\\Calculator.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
