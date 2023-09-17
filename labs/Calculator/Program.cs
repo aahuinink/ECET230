@@ -1,13 +1,13 @@
 ﻿using CalculatorLibrary;
 
 namespace CalculatorProgram
-{ }
+{
     class Program
     {
         static void Main(string[] args)
         {
             bool endApp = false;
-            Calculator calculator = new Calculator();
+            CalculatorProcess calculator = new CalculatorProcess();
 
             // Display title as the C# console calculator app.
             Console.WriteLine(@"
@@ -30,70 +30,46 @@ namespace CalculatorProgram
 
             while (!endApp)
             {
-                // Declare variables and set to empty.
-                string numInput1 = "";
-                string numInput2 = "";
-                CalcOutput result;
-
                 // Ask the user to type the first number.
-                Console.Write("Type a number, and then press Enter: ");
-                numInput1 = Console.ReadLine();
+                calculator.num1 = calculator.GetNumber(1);
 
-                double cleanNum1 = 0;
-                while (!double.TryParse(numInput1, out cleanNum1))
-                {
-                    Console.Write("This is not valid input. Please enter an integer value: ");
-                    numInput1 = Console.ReadLine();
-                }
-
-                // Ask the user to type the second number.
-                Console.Write("Type another number, and then press Enter: ");
-
-                numInput2 = Console.ReadLine();
-
-                double cleanNum2 = 0;
-                while (!double.TryParse(numInput2, out cleanNum2))
-                {
-                    Console.Write("This is not valid input. Please enter an integer value: ");
-                    numInput2 = Console.ReadLine();
-                }
+                // get the user to enter the second number
+                calculator.num2 = calculator.GetNumber(2);
 
                 // Ask the user to choose an operator.
-                Console.WriteLine("Choose an operator from the following list:");
-                Console.WriteLine("\ta - Add");
-                Console.WriteLine("\ts - Subtract");
-                Console.WriteLine("\tm - Multiply");
-                Console.WriteLine("\td - Divide");
-                Console.WriteLine("\te - Exponent");
-                Console.Write("Your option? ");
-
-                string op = Console.ReadLine();
+                calculator.operID = calculator.GetOperatorID();
 
                 try
                 {
-                    result = calculator.DoOperation(cleanNum1, cleanNum2, op);
-                    if (double.IsNaN(result.num))
+                    // try to do the operation
+                    calculator.DoOperation();
+
+                    // if the result is not a number
+                    if (double.IsNaN(calculator.result))
                     {
+                        // alert the user
                         Console.WriteLine("This operation will result in a mathematical error.\n");
                     }
                     else
                     {
+                        // otherwise print out the result in the colour green
                         Console.WriteLine($"Your result:");
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine($"{cleanNum1} {result.oper} {cleanNum2} = {result.num}");
+                        Console.WriteLine($"{calculator.num1} {calculator.oper} {calculator.num2} = {calculator.result}");
                         Console.ResetColor();
                     }
                 }
+                // if theres an error/exception
                 catch (Exception e)
                 {
-                    Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message);
+                    Console.WriteLine("Oh no! An exception occurred trying to do the math.\n - Details: " + e.Message); // print out the error
                 }
 
                 Console.WriteLine("------------------------\n");
 
                 // Wait for the user to respond before closing.
                 Console.Write("Press 'n' and Enter to close the app, or press any other key and Enter to continue: ");
-                if (Console.ReadLine() == "n") endApp = true;
+                endApp = (Console.ReadLine() == "n" ? true : false); // check to see if the user wants to exit the application
 
                 Console.WriteLine("\n"); // Friendly linespacing.
             }
@@ -101,3 +77,4 @@ namespace CalculatorProgram
             return;
         }
     }
+}
