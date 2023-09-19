@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-17T23:18:07.865</Modified>
+      <Modified>2023-09-19T00:53:11.599</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MAUI_calculator.dll">
       <PackagePath>MAUI_calculator.dll</PackagePath>
-      <Modified>2023-09-17T23:18:07.099</Modified>
+      <Modified>2023-09-19T00:53:10.630</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MAUI_calculator.exe</PackagePath>
-      <Modified>2023-09-17T23:18:07.148</Modified>
+      <Modified>2023-09-19T00:53:10.672</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MAUI_calculator.deps.json">
       <PackagePath>MAUI_calculator.deps.json</PackagePath>
