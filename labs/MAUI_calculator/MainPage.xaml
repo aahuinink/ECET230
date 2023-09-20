@@ -3,19 +3,131 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUI_calculator.MainPage">
 
-    <Grid RowDefinitions=".10*, .10*, .2*, .2*, .2*, .2*"
-          ColumnDefinitions=".25*, .25*, .25*, .25*"
-          Padding="10">
+    
+
+    <VerticalStackLayout x:Name="buttonPad"
+                         HorizontalOptions="Center">
 
         <Border Style="{StaticResource OutputBorder}"
-                Grid.ColumnSpan="4"
-                Grid.Row="0">
+            Grid.ColumnSpan="4"
+            Grid.Row="0">
 
             <Label Style="{StaticResource OutputLabel}"
-                   Grid.ColumnSpan="4"
-                   Text="Hello World"
+               Text="Hello World"
+               HorizontalTextAlignment="End"
+               VerticalTextAlignment="Center">
 
             </Label>
         </Border>
-    </Grid>
+
+        <HorizontalStackLayout x:Name="buttonsRow1"
+                               HorizontalOptions="CenterAndExpand">
+
+            <Button x:Name="buttonClear"
+                    Style="{x:StaticResource UnpressedBtn}"
+                    Text="AC"
+                    WidthRequest="110">
+            </Button>
+
+            <Button x:Name="button2nd"
+                    Style="{x:StaticResource UnpressedBtn}"
+                    Text="2nd"
+                    WidthRequest="110">
+            </Button>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="buttonsRow2"
+                               HorizontalOptions="CenterAndExpand">
+            <Button x:Name="buttonOne"
+                        Style="{x:StaticResource UnpressedBtn}"
+                        Text="1">
+            </Button>
+
+            <Button x:Name="buttonTwo"
+                        Style="{x:StaticResource UnpressedBtn}"
+                        Grid.Column="1"
+                        Text="2">
+            </Button>
+
+            <Button x:Name="buttonThree"
+                        Style="{x:StaticResource UnpressedBtn}"
+                        Text="3">
+            </Button>
+
+            <Button x:Name="buttonPlus"
+                        Style="{x:StaticResource UnpressedBtn}"
+                        Text="+">
+            </Button>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="buttonsRow3"
+                               HorizontalOptions="CenterAndExpand">
+            <Button x:Name="buttonFour"
+Style="{x:StaticResource UnpressedBtn}"
+Text="4">
+            </Button>
+
+            <Button x:Name="buttonFive"
+	Style="{x:StaticResource UnpressedBtn}"
+	Text="5">
+            </Button>
+
+            <Button x:Name="buttonSix"
+	Style="{x:StaticResource UnpressedBtn}"
+	Text="6">
+            </Button>
+
+            <Button x:Name="buttonMinus"
+	Style="{x:StaticResource UnpressedBtn}"
+	Text="-">
+            </Button>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="buttonsRow4"
+                               HorizontalOptions="CenterAndExpand">
+            <Button x:Name="buttonSeven"
+        Style="{x:StaticResource UnpressedBtn}"
+        Text="7">
+            </Button>
+
+            <Button x:Name="buttonEight"
+        Style="{x:StaticResource UnpressedBtn}"
+        Text="8">
+            </Button>
+
+            <Button x:Name="buttonNine"
+        Style="{x:StaticResource UnpressedBtn}"
+        Text="9">
+            </Button>
+
+            <Button x:Name="buttonTimes"
+        Style="{x:StaticResource UnpressedBtn}"
+        Text="x">
+            </Button>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout x:Name="buttonsRow5"
+                               HorizontalOptions="CenterAndExpand">
+            <Button x:Name="buttonDecimal"
+        Style="{x:StaticResource UnpressedBtn}"
+        Text=".">
+            </Button>
+
+            <Button x:Name="buttonZero"
+        Style="{x:StaticResource UnpressedBtn}"
+        Text="0">
+            </Button>
+
+            <Button x:Name="buttonEquals"
+        Style="{x:StaticResource UnpressedBtn}"
+        Text="=">
+            </Button>
+
+            <Button x:Name="buttonDivide"
+        Style="{x:StaticResource UnpressedBtn}"
+        Text="/">
+
+            </Button>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
 </ContentPage>

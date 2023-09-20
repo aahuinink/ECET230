@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-19T00:53:11.599</Modified>
+      <Modified>2023-09-20T19:56:37.991</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-09-17T23:16:47.221</Modified>
+      <Modified>2023-09-20T19:48:26.687</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MAUI_calculator.runtimeconfig.json">
       <PackagePath>MAUI_calculator.runtimeconfig.json</PackagePath>
-      <Modified>2023-09-17T22:56:18.611</Modified>
+      <Modified>2023-09-20T19:48:26.556</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MAUI_calculator.dll">
       <PackagePath>MAUI_calculator.dll</PackagePath>
-      <Modified>2023-09-19T00:53:10.630</Modified>
+      <Modified>2023-09-20T19:56:36.898</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MAUI_calculator.exe</PackagePath>
-      <Modified>2023-09-19T00:53:10.672</Modified>
+      <Modified>2023-09-20T19:56:37.020</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MAUI_calculator.deps.json">
       <PackagePath>MAUI_calculator.deps.json</PackagePath>
-      <Modified>2023-09-17T22:56:18.508</Modified>
+      <Modified>2023-09-20T19:48:26.503</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.21\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -1083,23 +1083,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.474</Modified>
+      <Modified>2023-09-20T19:48:07.576</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.486</Modified>
+      <Modified>2023-09-20T19:48:07.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.501</Modified>
+      <Modified>2023-09-20T19:48:07.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.522</Modified>
+      <Modified>2023-09-20T19:48:07.680</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.599</Modified>
+      <Modified>2023-09-20T19:48:07.829</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -1111,207 +1111,207 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-09-17T07:50:43.637</Modified>
+      <Modified>2023-09-20T19:48:07.894</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.831</Modified>
+      <Modified>2023-09-20T19:48:08.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.839</Modified>
+      <Modified>2023-09-20T19:48:08.367</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.848</Modified>
+      <Modified>2023-09-20T19:48:08.382</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.859</Modified>
+      <Modified>2023-09-20T19:48:08.404</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.907</Modified>
+      <Modified>2023-09-20T19:48:08.483</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.696</Modified>
+      <Modified>2023-09-20T19:48:08.041</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.699</Modified>
+      <Modified>2023-09-20T19:48:08.048</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.710</Modified>
+      <Modified>2023-09-20T19:48:08.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.702</Modified>
+      <Modified>2023-09-20T19:48:08.056</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.705</Modified>
+      <Modified>2023-09-20T19:48:08.062</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.678</Modified>
+      <Modified>2023-09-20T19:48:08.005</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.681</Modified>
+      <Modified>2023-09-20T19:48:08.011</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.693</Modified>
+      <Modified>2023-09-20T19:48:08.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.683</Modified>
+      <Modified>2023-09-20T19:48:08.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.687</Modified>
+      <Modified>2023-09-20T19:48:08.024</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.644</Modified>
+      <Modified>2023-09-20T19:48:07.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.648</Modified>
+      <Modified>2023-09-20T19:48:07.929</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.651</Modified>
+      <Modified>2023-09-20T19:48:07.935</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.654</Modified>
+      <Modified>2023-09-20T19:48:07.945</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.658</Modified>
+      <Modified>2023-09-20T19:48:07.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.661</Modified>
+      <Modified>2023-09-20T19:48:07.963</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.664</Modified>
+      <Modified>2023-09-20T19:48:07.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.675</Modified>
+      <Modified>2023-09-20T19:48:07.998</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.667</Modified>
+      <Modified>2023-09-20T19:48:07.976</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.670</Modified>
+      <Modified>2023-09-20T19:48:07.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.749</Modified>
+      <Modified>2023-09-20T19:48:08.158</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.754</Modified>
+      <Modified>2023-09-20T19:48:08.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.759</Modified>
+      <Modified>2023-09-20T19:48:08.180</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.766</Modified>
+      <Modified>2023-09-20T19:48:08.200</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.776</Modified>
+      <Modified>2023-09-20T19:48:08.226</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.729</Modified>
+      <Modified>2023-09-20T19:48:08.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.732</Modified>
+      <Modified>2023-09-20T19:48:08.117</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.735</Modified>
+      <Modified>2023-09-20T19:48:08.123</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.740</Modified>
+      <Modified>2023-09-20T19:48:08.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.745</Modified>
+      <Modified>2023-09-20T19:48:08.149</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.714</Modified>
+      <Modified>2023-09-20T19:48:08.079</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.717</Modified>
+      <Modified>2023-09-20T19:48:08.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.719</Modified>
+      <Modified>2023-09-20T19:48:08.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.722</Modified>
+      <Modified>2023-09-20T19:48:08.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.727</Modified>
+      <Modified>2023-09-20T19:48:08.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.781</Modified>
+      <Modified>2023-09-20T19:48:08.235</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.787</Modified>
+      <Modified>2023-09-20T19:48:08.248</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.793</Modified>
+      <Modified>2023-09-20T19:48:08.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.803</Modified>
+      <Modified>2023-09-20T19:48:08.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.824</Modified>
+      <Modified>2023-09-20T19:48:08.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.668</Modified>
+      <Modified>2023-09-20T19:48:07.979</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.676</Modified>
+      <Modified>2023-09-20T19:48:07.998</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.687</Modified>
+      <Modified>2023-09-20T19:48:08.026</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.701</Modified>
+      <Modified>2023-09-20T19:48:08.062</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-09-17T07:50:43.738</Modified>
+      <Modified>2023-09-20T19:48:08.125</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
