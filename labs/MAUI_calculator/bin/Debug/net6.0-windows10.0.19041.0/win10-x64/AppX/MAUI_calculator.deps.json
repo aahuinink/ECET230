@@ -9,6 +9,7 @@
     ".NETCoreApp,Version=v6.0/win10-x64": {
       "MAUI_calculator/1.0": {
         "dependencies": {
+          "CommunityToolkit.Mvvm": "8.2.1",
           "Microsoft.Maui.Dependencies": "6.0.553",
           "Microsoft.Maui.Extensions": "6.0.553",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "6.0.21",
@@ -902,6 +903,14 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.2.1": {
+        "runtime": {
+          "lib/net6.0/CommunityToolkit.Mvvm.dll": {
+            "assemblyVersion": "8.2.0.0",
+            "fileVersion": "8.2.1.1"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/6.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
@@ -1140,6 +1149,13 @@
       "type": "runtimepack",
       "serviceable": false,
       "sha512": ""
+    },
+    "CommunityToolkit.Mvvm/8.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I24ofWVEdplxYjUez9/bljv/qb8r8Ccj6cvYXHexNBegLaD3iDy3QrzAAOYVMmfGWIXxlU1ZtECQNfU07+6hXQ==",
+      "path": "communitytoolkit.mvvm/8.2.1",
+      "hashPath": "communitytoolkit.mvvm.8.2.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/6.0.1": {
       "type": "package",

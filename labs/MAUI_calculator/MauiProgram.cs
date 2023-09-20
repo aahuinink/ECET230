@@ -1,4 +1,6 @@
-﻿namespace MAUI_calculator;
+﻿using MAUI_calculator.ViewModel;
+
+namespace MAUI_calculator;
 
 public static class MauiProgram
 {
@@ -12,6 +14,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
+
+		builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddSingleton<MainViewModel>();
 
 		return builder.Build();
 	}

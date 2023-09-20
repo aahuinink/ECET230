@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-			 x:Class="MAUI_calculator.MainPage">
+			 x:Class="MAUI_calculator.MainPage"
+             xmlns:viewmodel="clr-namespace:MAUI_calculator.ViewModel"
+             x:DataType="viewmodel:MainViewModel">
 
 
 
     <VerticalStackLayout x:Name="buttonPad"
 						 HorizontalOptions="Center">
-
+		
         <Border Style="{StaticResource OutputBorder}"
 			Grid.ColumnSpan="4"
 			Grid.Row="0">
 
             <Label Style="{StaticResource OutputLabel}"
-			   Text="Hello World"
+			   Text="{Binding CurrentNumString}"
 			   HorizontalTextAlignment="End"
 			   VerticalTextAlignment="Center">
 
@@ -22,7 +24,7 @@
 
         <HorizontalStackLayout x:Name="buttonsRow1"
 							   HorizontalOptions="CenterAndExpand">
-
+			
             <Button x:Name="buttonClear"
 					Style="{x:StaticResource CalculatorBtn}"
 					Text="AC"
@@ -62,7 +64,7 @@
             <Button x:Name="buttonPlus"
 						Style="{x:StaticResource CalculatorBtn}"
 						Text="+"
-					Clicked="buttonPlus_Clicked">
+					Command="{Binding AddCommand}">
             </Button>
         </HorizontalStackLayout>
 

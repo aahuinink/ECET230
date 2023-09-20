@@ -1,12 +1,30 @@
-﻿namespace MAUI_calculator;
+﻿using System.Security.Cryptography.X509Certificates;
+using MAUI_calculator.ViewModel;
+
+namespace MAUI_calculator;
+
 
 public partial class MainPage : ContentPage
 {
+    // Enum to store the state that the output is at
+    public enum OutputStates
+    {
+        Root,
+        Child
+    }
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    // create outputstate variable to store current state
+    OutputStates OutputState;
+
+    // create strings to store the numbers inputed by the user
+    string previousNum; // the number previously entered by the user
+    string currentNum; // the number currently being entered by the user
+
+    public MainPage(MainViewModel vm)
+    {
+        InitializeComponent();
+        BindingContext = vm;
+    }
 
     private void buttonOne_Clicked(object sender, EventArgs e)
     {
@@ -20,7 +38,7 @@ public partial class MainPage : ContentPage
 
     private void buttonClear_Clicked(object sender, EventArgs e)
     {
-
+        
     }
 
     private void button2nd_Clicked(object sender, EventArgs e)

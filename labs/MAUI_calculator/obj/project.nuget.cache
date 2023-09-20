@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Rdro5+LdRfFyCaXzWtxSpZJynN0BLKBFKeeDfyqVv+2X36M7/AYlQRVmU1/ifyd3Uy2CDKwur+ZLbJTgVoSWmg==",
+  "dgSpecHash": "LUPvMksAuxarZee3scSszX6qkTe3rjhlS6eBdYCPueDL0eBRtv0X/25DHhLtjTdckwcWCj2BwmolcnhhysxzmQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\a_hui\\source\\repos\\ECET230\\labs\\MAUI_calculator\\MAUI_calculator.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\a_hui\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
     "C:\\Users\\a_hui\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\a_hui\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "C:\\Users\\a_hui\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
