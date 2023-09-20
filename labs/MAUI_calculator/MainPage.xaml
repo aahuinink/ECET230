@@ -24,13 +24,13 @@
                                HorizontalOptions="CenterAndExpand">
 
             <Button x:Name="buttonClear"
-                    Style="{x:StaticResource UnpressedBtn}"
+                    Style="{x:StaticResource CalculatorBtn}"
                     Text="AC"
                     WidthRequest="110">
             </Button>
 
             <Button x:Name="button2nd"
-                    Style="{x:StaticResource UnpressedBtn}"
+                    Style="{x:StaticResource CalculatorBtn}"
                     Text="2nd"
                     WidthRequest="110">
             </Button>
@@ -39,23 +39,23 @@
         <HorizontalStackLayout x:Name="buttonsRow2"
                                HorizontalOptions="CenterAndExpand">
             <Button x:Name="buttonOne"
-                        Style="{x:StaticResource UnpressedBtn}"
+                        Style="{x:StaticResource CalculatorBtn}"
                         Text="1">
             </Button>
 
             <Button x:Name="buttonTwo"
-                        Style="{x:StaticResource UnpressedBtn}"
+                        Style="{x:StaticResource CalculatorBtn}"
                         Grid.Column="1"
                         Text="2">
             </Button>
 
             <Button x:Name="buttonThree"
-                        Style="{x:StaticResource UnpressedBtn}"
+                        Style="{x:StaticResource CalculatorBtn}"
                         Text="3">
             </Button>
 
             <Button x:Name="buttonPlus"
-                        Style="{x:StaticResource UnpressedBtn}"
+                        Style="{x:StaticResource CalculatorBtn}"
                         Text="+">
             </Button>
         </HorizontalStackLayout>
@@ -63,22 +63,22 @@
         <HorizontalStackLayout x:Name="buttonsRow3"
                                HorizontalOptions="CenterAndExpand">
             <Button x:Name="buttonFour"
-Style="{x:StaticResource UnpressedBtn}"
+Style="{x:StaticResource CalculatorBtn}"
 Text="4">
             </Button>
 
             <Button x:Name="buttonFive"
-	Style="{x:StaticResource UnpressedBtn}"
+	Style="{x:StaticResource CalculatorBtn}"
 	Text="5">
             </Button>
 
             <Button x:Name="buttonSix"
-	Style="{x:StaticResource UnpressedBtn}"
+	Style="{x:StaticResource CalculatorBtn}"
 	Text="6">
             </Button>
 
             <Button x:Name="buttonMinus"
-	Style="{x:StaticResource UnpressedBtn}"
+	Style="{x:StaticResource CalculatorBtn}"
 	Text="-">
             </Button>
         </HorizontalStackLayout>
@@ -86,22 +86,22 @@ Text="4">
         <HorizontalStackLayout x:Name="buttonsRow4"
                                HorizontalOptions="CenterAndExpand">
             <Button x:Name="buttonSeven"
-        Style="{x:StaticResource UnpressedBtn}"
+        Style="{x:StaticResource CalculatorBtn}"
         Text="7">
             </Button>
 
             <Button x:Name="buttonEight"
-        Style="{x:StaticResource UnpressedBtn}"
+        Style="{x:StaticResource CalculatorBtn}"
         Text="8">
             </Button>
 
             <Button x:Name="buttonNine"
-        Style="{x:StaticResource UnpressedBtn}"
+        Style="{x:StaticResource CalculatorBtn}"
         Text="9">
             </Button>
 
             <Button x:Name="buttonTimes"
-        Style="{x:StaticResource UnpressedBtn}"
+        Style="{x:StaticResource CalculatorBtn}"
         Text="x">
             </Button>
         </HorizontalStackLayout>
@@ -109,22 +109,22 @@ Text="4">
         <HorizontalStackLayout x:Name="buttonsRow5"
                                HorizontalOptions="CenterAndExpand">
             <Button x:Name="buttonDecimal"
-        Style="{x:StaticResource UnpressedBtn}"
+        Style="{x:StaticResource CalculatorBtn}"
         Text=".">
             </Button>
 
             <Button x:Name="buttonZero"
-        Style="{x:StaticResource UnpressedBtn}"
+        Style="{x:StaticResource CalculatorBtn}"
         Text="0">
             </Button>
 
             <Button x:Name="buttonEquals"
-        Style="{x:StaticResource UnpressedBtn}"
+        Style="{x:StaticResource CalculatorBtn}"
         Text="=">
             </Button>
 
             <Button x:Name="buttonDivide"
-        Style="{x:StaticResource UnpressedBtn}"
+        Style="{x:StaticResource CalculatorBtn}"
         Text="/">
 
             </Button>
