@@ -6,39 +6,73 @@ namespace MAUI_calculator;
 
 public partial class MainPage : ContentPage
 {
-    // Enum to store the state that the output is at
-    public enum OutputStates
+    // create an enum to handle the changes in output states
+    enum OutputStates
     {
-        Root,
-        Child
+        Start,
+        Input,
+        Display
     }
 
-    // create outputstate variable to store current state
-    OutputStates OutputState;
+    // variables to manage things
+    OutputStates OutputState;   // handle output states
+    double previousNum;         // store the number previously inputted
+    double currentNum;          // store the number the user just inputted
+    string inputString;         // store the user's input string
+    double outputNum;           // the number to be output to the user
+    string outputString;        // the string to be output to the user
 
-    // create strings to store the numbers inputed by the user
-    string previousNum; // the number previously entered by the user
-    string currentNum; // the number currently being entered by the user
-
-    public MainPage(MainViewModel vm)
+    public MainPage()
     {
+        OutputState = OutputStates.Start;   // initialize at the starting state
+        outputString = "0";                 // initializ output string to 0
+        inputString = "0";                   // initialize input string
+
+        CalcOut.Text = inputString;        // display the initial output string
         InitializeComponent();
-        BindingContext = vm;
     }
 
-    private void buttonOne_Clicked(object sender, EventArgs e)
+    private void InputChar(object sender, EventArgs e)
     {
-
+        Button btn = sender as Button;
+        var text = btn.Text;
+        inputString += text;
+        CalcOut.Text = inputString;
+        return;
     }
 
-    private void buttonTwo_Clicked(object sender, EventArgs e)
+    private void ResetValues()
     {
-
+        OutputState = OutputStates.Start;   // set back to start
+        currentNum = 0;                     // and reset all values
+        previousNum = 0;
+        outputString = "0";
+        inputString = "0";
     }
 
     private void buttonClear_Clicked(object sender, EventArgs e)
     {
-        
+        switch (OutputState)
+        {
+            case OutputStates.Start:
+                break;
+            case OutputStates.Input:
+                if (inputString == "0")     // if the user hasn't input any data and presses clear
+                {
+                    ResetValues();          // reset all values
+                }
+                else
+                {
+                    inputString = "0";      // otherwise just reset the input string, but keep all other values
+                }
+                break;
+            case OutputStates.Display:
+                ResetValues();
+                break;
+            default:
+                break;
+        }
+        CalcOut.Text = inputString;         // display  the input string
     }
 
     private void button2nd_Clicked(object sender, EventArgs e)
@@ -46,29 +80,13 @@ public partial class MainPage : ContentPage
 
     }
 
-    private void buttonThree_Clicked(object sender, EventArgs e)
-    {
-
-    }
 
     private void buttonPlus_Clicked(object sender, EventArgs e)
     {
-
-    }
-
-    private void buttonFour_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void buttonFive_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void buttonSix_Clicked(object sender, EventArgs e)
-    {
-
+        if(double.TryParse(inputString, out currentNum))
+        {
+            
+        }
     }
 
     private void buttonMinus_Clicked(object sender, EventArgs e)
@@ -76,32 +94,7 @@ public partial class MainPage : ContentPage
 
     }
 
-    private void buttonSeven_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void buttonEight_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void buttonNine_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
     private void buttonTimes_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void buttonDecimal_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void buttonZero_Clicked(object sender, EventArgs e)
     {
 
     }

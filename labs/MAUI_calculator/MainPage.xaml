@@ -14,8 +14,9 @@
 			Grid.ColumnSpan="4"
 			Grid.Row="0">
 
-            <Label Style="{StaticResource OutputLabel}"
-			   Text="{Binding CurrentNumString}"
+            <Label x:Name="CalcOut"
+                Style="{StaticResource OutputLabel}"
+			   Text=""
 			   HorizontalTextAlignment="End"
 			   VerticalTextAlignment="Center">
 
@@ -45,26 +46,26 @@
             <Button x:Name="buttonOne"
 					Style="{x:StaticResource CalculatorBtn}"
 					Text="1"
-					Clicked="buttonOne_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonTwo"
 						Style="{x:StaticResource CalculatorBtn}"
 						Grid.Column="1"
 						Text="2"
-					Clicked="buttonTwo_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonThree"
 						Style="{x:StaticResource CalculatorBtn}"
 						Text="3"
-					Clicked="buttonThree_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonPlus"
 						Style="{x:StaticResource CalculatorBtn}"
 						Text="+"
-					Command="{Binding AddCommand}">
+					Clicked="buttonPlus_Clicked">
             </Button>
         </HorizontalStackLayout>
 
@@ -73,19 +74,19 @@
             <Button x:Name="buttonFour"
 Style="{x:StaticResource CalculatorBtn}"
 Text="4"
-					Clicked="buttonFour_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonFive"
 	Style="{x:StaticResource CalculatorBtn}"
 	Text="5"
-					Clicked="buttonFive_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonSix"
 	Style="{x:StaticResource CalculatorBtn}"
 	Text="6"
-					Clicked="buttonSix_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonMinus"
@@ -100,19 +101,19 @@ Text="4"
             <Button x:Name="buttonSeven"
 		Style="{x:StaticResource CalculatorBtn}"
 		Text="7"
-					Clicked="buttonSeven_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonEight"
 		Style="{x:StaticResource CalculatorBtn}"
 		Text="8"
-					Clicked="buttonEight_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonNine"
 		Style="{x:StaticResource CalculatorBtn}"
 		Text="9"
-					Clicked="buttonNine_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonTimes"
@@ -127,13 +128,13 @@ Text="4"
             <Button x:Name="buttonDecimal"
 		Style="{x:StaticResource CalculatorBtn}"
 		Text="."
-					Clicked="buttonDecimal_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonZero"
 		Style="{x:StaticResource CalculatorBtn}"
 		Text="0"
-					Clicked="buttonZero_Clicked">
+					Clicked="InputChar">
             </Button>
 
             <Button x:Name="buttonEquals"
