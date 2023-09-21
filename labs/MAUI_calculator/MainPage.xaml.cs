@@ -1,7 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using MAUI_calculator.ViewModel;
-
-namespace MAUI_calculator;
+﻿namespace MAUI_calculator;
 
 
 public partial class MainPage : ContentPage
@@ -18,26 +15,27 @@ public partial class MainPage : ContentPage
     OutputStates OutputState;   // handle output states
     double previousNum;         // store the number previously inputted
     double currentNum;          // store the number the user just inputted
-    string inputString;         // store the user's input string
+    string inputString = string.Empty;         // store the user's input string
     double outputNum;           // the number to be output to the user
-    string outputString;        // the string to be output to the user
+    string outputString = string.Empty;        // the string to be output to the user
 
     public MainPage()
     {
         OutputState = OutputStates.Start;   // initialize at the starting state
-        outputString = "0";                 // initializ output string to 0
-        inputString = "0";                   // initialize input string
-
-        CalcOut.Text = inputString;        // display the initial output string
         InitializeComponent();
     }
 
     private void InputChar(object sender, EventArgs e)
     {
-        Button btn = sender as Button;
-        var text = btn.Text;
-        inputString += text;
+        if(inputString == "0")              // delete leading zero and set state to 0
+        {
+            inputString = "";
+        }
+        Button btn = sender as Button;      // create a button object to contain the sender info
+        var text = btn.Text;                // store the button text
+        inputString += text;                // append the button text to the output string
         CalcOut.Text = inputString;
+        OutputState = OutputStates.Input;
         return;
     }
 

@@ -1,1 +1,1 @@
-C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\MAUI_calculator.csproj;x64
+C:\Users\C0520296\Source\Repos\ECET230\labs\MAUI_calculator\MAUI_calculator.csproj;x64

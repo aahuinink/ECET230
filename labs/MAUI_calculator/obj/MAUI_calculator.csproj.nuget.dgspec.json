@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a_hui\\source\\repos\\ECET230\\labs\\MAUI_calculator\\MAUI_calculator.csproj": {}
+    "C:\\Users\\C0520296\\Source\\Repos\\ECET230\\labs\\MAUI_calculator\\MAUI_calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a_hui\\source\\repos\\ECET230\\labs\\MAUI_calculator\\MAUI_calculator.csproj": {
+    "C:\\Users\\C0520296\\Source\\Repos\\ECET230\\labs\\MAUI_calculator\\MAUI_calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a_hui\\source\\repos\\ECET230\\labs\\MAUI_calculator\\MAUI_calculator.csproj",
+        "projectUniqueName": "C:\\Users\\C0520296\\Source\\Repos\\ECET230\\labs\\MAUI_calculator\\MAUI_calculator.csproj",
         "projectName": "MAUI_calculator",
-        "projectPath": "C:\\Users\\a_hui\\source\\repos\\ECET230\\labs\\MAUI_calculator\\MAUI_calculator.csproj",
-        "packagesPath": "C:\\Users\\a_hui\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a_hui\\source\\repos\\ECET230\\labs\\MAUI_calculator\\obj\\",
+        "projectPath": "C:\\Users\\C0520296\\Source\\Repos\\ECET230\\labs\\MAUI_calculator\\MAUI_calculator.csproj",
+        "packagesPath": "C:\\Users\\C0520296\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\C0520296\\Source\\Repos\\ECET230\\labs\\MAUI_calculator\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\a_hui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\C0520296\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -29,6 +29,7 @@
           "net6.0-windows10.0.19041.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -89,35 +90,35 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.Android.Ref.31",
-              "version": "[32.0.509, 32.0.509]"
+              "version": "[32.0.485, 32.0.485]"
             },
             {
               "name": "Microsoft.Android.Runtime.31.android-arm",
-              "version": "[32.0.509, 32.0.509]"
+              "version": "[32.0.485, 32.0.485]"
             },
             {
               "name": "Microsoft.Android.Runtime.31.android-arm64",
-              "version": "[32.0.509, 32.0.509]"
+              "version": "[32.0.485, 32.0.485]"
             },
             {
               "name": "Microsoft.Android.Runtime.31.android-x64",
-              "version": "[32.0.509, 32.0.509]"
+              "version": "[32.0.485, 32.0.485]"
             },
             {
               "name": "Microsoft.Android.Runtime.31.android-x86",
-              "version": "[32.0.509, 32.0.509]"
+              "version": "[32.0.485, 32.0.485]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
-              "version": "[6.0.21, 6.0.21]"
+              "version": "[6.0.20, 6.0.20]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
-              "version": "[6.0.21, 6.0.21]"
+              "version": "[6.0.20, 6.0.20]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-              "version": "[6.0.21, 6.0.21]"
+              "version": "[6.0.20, 6.0.20]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.android",
@@ -161,7 +162,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         },
         "net6.0-ios16.1": {
           "targetAlias": "net6.0-ios",
@@ -248,7 +249,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         },
         "net6.0-maccatalyst16.1": {
           "targetAlias": "net6.0-maccatalyst",
@@ -336,7 +337,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         },
         "net6.0-windows10.0.19041": {
           "targetAlias": "net6.0-windows10.0.19041.0",
@@ -370,7 +371,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[6.0.21, 6.0.21]"
+              "version": "[6.0.20, 6.0.20]"
             },
             {
               "name": "Microsoft.Maui.Controls.Ref.win",
@@ -398,7 +399,7 @@
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[6.0.21, 6.0.21]"
+              "version": "[6.0.20, 6.0.20]"
             },
             {
               "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -406,7 +407,7 @@
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[6.0.21, 6.0.21]"
+              "version": "[6.0.20, 6.0.20]"
             }
           ],
           "frameworkReferences": {
@@ -426,7 +427,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

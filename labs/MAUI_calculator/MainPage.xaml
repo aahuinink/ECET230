@@ -16,7 +16,7 @@
 
             <Label x:Name="CalcOut"
                 Style="{StaticResource OutputLabel}"
-			   Text=""
+			   Text="0"
 			   HorizontalTextAlignment="End"
 			   VerticalTextAlignment="Center">
 
