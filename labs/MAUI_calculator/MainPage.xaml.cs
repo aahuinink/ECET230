@@ -4,15 +4,25 @@
 public partial class MainPage : ContentPage
 {
     // create an enum to handle the changes in output states
-    enum OutputStates
+    enum StateInput
     {
-        Start,
-        Input,
-        Display
+        Start,  // everything at 0 (clear pressed more than once)
+        Root,   // the first number entered after being in start state
+        Child,  // any numbers entered after root number
+        Display // displaying the final output
+    }
+
+    enum Operator // enum to store the last operator button pressed
+    {
+        None,     
+        Plus,
+        Minus,
+        Times,
+        Divide
     }
 
     // variables to manage things
-    OutputStates OutputState;   // handle output states
+    StateInput InputState;   // handle output states
     double previousNum;         // store the number previously inputted
     double currentNum;          // store the number the user just inputted
     string inputString = string.Empty;         // store the user's input string
@@ -21,7 +31,7 @@ public partial class MainPage : ContentPage
 
     public MainPage()
     {
-        OutputState = OutputStates.Start;   // initialize at the starting state
+        InputState= StateInput.Start;   // initialize at the starting state
         InitializeComponent();
     }
 
@@ -35,13 +45,13 @@ public partial class MainPage : ContentPage
         var text = btn.Text;                // store the button text
         inputString += text;                // append the button text to the output string
         CalcOut.Text = inputString;
-        OutputState = OutputStates.Input;
+        InputState= StateInput.Input;
         return;
     }
 
     private void ResetValues()
     {
-        OutputState = OutputStates.Start;   // set back to start
+        InputState= StateInput.Start;   // set back to start
         currentNum = 0;                     // and reset all values
         previousNum = 0;
         outputString = "0";
@@ -50,59 +60,10 @@ public partial class MainPage : ContentPage
 
     private void buttonClear_Clicked(object sender, EventArgs e)
     {
-        switch (OutputState)
-        {
-            case OutputStates.Start:
-                break;
-            case OutputStates.Input:
-                if (inputString == "0")     // if the user hasn't input any data and presses clear
-                {
-                    ResetValues();          // reset all values
-                }
-                else
-                {
-                    inputString = "0";      // otherwise just reset the input string, but keep all other values
-                }
-                break;
-            case OutputStates.Display:
-                ResetValues();
-                break;
-            default:
-                break;
-        }
-        CalcOut.Text = inputString;         // display  the input string
-    }
-
-    private void button2nd_Clicked(object sender, EventArgs e)
-    {
 
     }
 
-
-    private void buttonPlus_Clicked(object sender, EventArgs e)
-    {
-        if(double.TryParse(inputString, out currentNum))
-        {
-            
-        }
-    }
-
-    private void buttonMinus_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void buttonTimes_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void buttonEquals_Clicked(object sender, EventArgs e)
-    {
-
-    }
-
-    private void buttonDivide_Clicked(object sender, EventArgs e)
+    private void buttonOperator_Clicked()
     {
 
     }
