@@ -3,8 +3,9 @@
 
 public partial class MainPage : ContentPage
 {
+    public 
     // create an enum to handle the changes in output states
-    enum StateInput
+    enum StatesOfInput
     {
         Start,  // everything at 0 (clear pressed more than once)
         Root,   // the first number entered after being in start state
@@ -12,9 +13,10 @@ public partial class MainPage : ContentPage
         Display // displaying the final output
     }
 
-    enum Operator // enum to store the last operator button pressed
+    public enum Operator : int // enum to store the last operator button pressed
     {
-        None,     
+        None,
+        [StringValue]
         Plus,
         Minus,
         Times,
@@ -22,7 +24,7 @@ public partial class MainPage : ContentPage
     }
 
     // variables to manage things
-    StateInput InputState;   // handle output states
+    StatesOfInput InputState;   // handle output states
     double previousNum;         // store the number previously inputted
     double currentNum;          // store the number the user just inputted
     string inputString = string.Empty;         // store the user's input string
@@ -31,7 +33,7 @@ public partial class MainPage : ContentPage
 
     public MainPage()
     {
-        InputState= StateInput.Start;   // initialize at the starting state
+        InputState= StatesOfInput.Start;   // initialize at the starting state
         InitializeComponent();
     }
 
@@ -45,13 +47,13 @@ public partial class MainPage : ContentPage
         var text = btn.Text;                // store the button text
         inputString += text;                // append the button text to the output string
         CalcOut.Text = inputString;
-        InputState= StateInput.Input;
+        InputState= StatesOfInput.Input;
         return;
     }
 
     private void ResetValues()
     {
-        InputState= StateInput.Start;   // set back to start
+        InputState= StatesOfInput.Start;   // set back to start
         currentNum = 0;                     // and reset all values
         previousNum = 0;
         outputString = "0";

@@ -1,7 +1,12 @@
-﻿using MAUI_calculator.ViewModel;
+﻿namespace MAUI_calculator;
 
-namespace MAUI_calculator;
+public class StringValue : Attribute
+{
+	public string Value;
 
+	public StringValue(string value) { this.Value = value; }
+	public string GetValue() { return Value; }
+}
 public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
@@ -16,7 +21,6 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddSingleton<MainPage>();
-		builder.Services.AddSingleton<MainViewModel>();
 
 		return builder.Build();
 	}

@@ -7,7 +7,7 @@ namespace MAUI_calculator.ViewModel
 {
     public partial class MainViewModel : ObservableObject
     {   
-        enum StateInput
+        enum StatesOfInput
         {
             Start,      // user has pressed clear more than once, or the application has just begun
             Input,      // the user is inputting a new number
@@ -16,7 +16,7 @@ namespace MAUI_calculator.ViewModel
 
         //private variables
         //controls the output state
-        StateInput OutputState;
+        StatesOfInput OutputState;
 
         // variables to hold the current number the user is inputting
         [ObservableProperty]
