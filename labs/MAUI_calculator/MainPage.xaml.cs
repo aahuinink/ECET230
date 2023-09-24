@@ -40,6 +40,7 @@ public partial class MainPage : ContentPage
         {
             case StatesOfInput.Start:               // if start
                 inputString = btn.Text;             // set output to the char passed by the button
+                oper = "";                          // reset operator
                 InputState = StatesOfInput.Root;    // set state to root
                 break;
             case StatesOfInput.Root:                // if first number
@@ -51,6 +52,7 @@ public partial class MainPage : ContentPage
             case StatesOfInput.Display:             // if displaying
                 resultString = "";                  // clear the result string
                 inputString = btn.Text;             // set input to the button text
+                oper = "";                          // reset operator
                 InputState = StatesOfInput.Root;    // set state to root
                 break;
             case StatesOfInput.AwaitClear:          // if awaiting 2nd clear press
@@ -63,7 +65,7 @@ public partial class MainPage : ContentPage
         CalcOut.Text = inputString;                 // output to user
     }
 
-    // --- CharButton_clicked --- //
+    // --- OperButton_clicked --- //
     // Handles an operator button clicked
     private void OperButton_cliked(object sender, EventArgs e)
     {
@@ -99,13 +101,8 @@ public partial class MainPage : ContentPage
         }
     }
 
-    private string DoOperation()
-    {
-        string stringResult = string.Empty;  // stores the string result of the operation
-
-        return stringResult;
-    }
-
+    // --- ClearButton_clicked --- //
+    // Handles the clear button action
     private void ClearButton_clicked(object sender, EventArgs e)
     {
         Button btn = (Button)sender;
@@ -138,17 +135,81 @@ public partial class MainPage : ContentPage
         }
     }
 
+    // --- EnterButton_clicked --- //
+    // Handles the enter button action
     private void EnterButton_clicked(object obj, EventArgs e)
     {
         Button button = (Button)obj;
         switch (InputState)
         {
-            case StatesOfInput.Child:
-                if (string.IsNullOrEmpty(inputString))
+            case StatesOfInput.Child:                       // if there's actually something to do
+                if (string.IsNullOrEmpty(inputString))      // and there's input as well
                 {
+                    break;
+                }
+                else
+                {
+                    resultString = DoOperation();           // do the operation, reset the input and operator strings, and display the result
+                    inputString = "";
+                    oper = "";
+                    CalcOut.Text = resultString;
+                    InputState = StatesOfInput.Display;     // change to display state
+                    break;
 
                 }
+            default:    // otherwise, do nothing
+                break;  
         }
+    }
+
+    private string DoOperation()
+    {
+        string result = string.Empty;  // stores the string result of the operation
+        double prevNum;     // the previously entered number
+        double currentNum;  // the current input number
+
+        if(!double.TryParse(resultString, out prevNum)) {   // if the first entry can't be parsed
+            CalcOut.Text = "INVALID ENTRY";             // print out warning
+            inputString = "";                           // reset all variables
+            resultString = "";
+            oper = "";
+            InputState = StatesOfInput.Start;           // reset to starting state
+        }
+
+        if(!double.TryParse(inputString, out currentNum))   // if the second entry can't be parsed
+        {   
+            CalcOut.Text = "INVALID ENTRY";             // print out warning
+            inputString = "";                           // reset all variables
+            resultString = "";
+            oper = "";
+            InputState = StatesOfInput.Start;           // reset to starting state
+        }
+
+        switch (oper)
+        {
+            case "+":
+                result = (prevNum + currentNum).ToString();         // return sum of the 2 numbers
+                break;
+            case "-":
+                result = (prevNum - currentNum).ToString(); break;  // return difference of the two numbers
+            case "*":
+                result = (prevNum * currentNum).ToString(); break;  // return product
+            case "/":
+                if ((prevNum / currentNum) == double.NaN)           // if divide by zero
+                {
+                    CalcOut.Text = "DIV BY 0 ERROR";                // print out warning to user
+                    inputString = "";                           // reset all variables
+                    resultString = "";
+                    oper = "";
+                    InputState = StatesOfInput.Start;           // reset to starting state
+                } else
+                {
+                    result = (prevNum / currentNum).ToString();     // otherwise return fraction
+                }
+                break;
+        }
+
+        return result;
     }
 }
 
