@@ -180,7 +180,7 @@
 
     <Style x:Key="OutputLabel" TargetType="Label">
         <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray200}}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
+        <Setter Property="FontFamily" Value="Digital-7" />
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="Padding" Value="20"/>
     </Style>

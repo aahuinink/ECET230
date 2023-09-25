@@ -1,4 +1,4 @@
-﻿using System.Xml;
+﻿
 
 namespace MAUI_calculator;
 
@@ -17,9 +17,10 @@ public partial class MainPage : ContentPage
 
     // variables to manage things
     StatesOfInput InputState;   // handle output states
-    string inputString;
-    string resultString;
-    string oper;
+    string inputString;         // store input
+    string resultString;        // store result
+    string oper;                // store operator
+    bool secondFlag = false;    // store if 2nd button has been clicked
 
     public MainPage()
     {
@@ -158,6 +159,23 @@ public partial class MainPage : ContentPage
         }
     }
 
+    // --- SecondButton_clicked --- //
+    // handles 2nd button click
+    private void SecondButton_clicked()
+    {
+        if (secondFlag)
+        {
+            buttonPlus.Text = "^";
+        } else
+        {
+            buttonPlus.Text = "+";
+        }
+        secondFlag = secondFlag ^ true; // toggle secondFlag
+    }
+    
+
+    // --- DoOperation --- // 
+    // does the math operation requested and handles errors...
     private string DoOperation()
     {
         string result = string.Empty;  // stores the string result of the operation
@@ -203,6 +221,14 @@ public partial class MainPage : ContentPage
                     result = (prevNum / currentNum).ToString();     // otherwise return fraction
                 }
                 break;
+            case "^":
+                result = (Math.Pow(prevNum, currentNum)).ToString(); break; // return power
+            default:
+                CalcOut.Text = "INVALID";
+                inputString = "";
+                resultString = "";
+                oper = "";
+                InputState = StatesOfInput.Start; break;
         }
 
         return result;

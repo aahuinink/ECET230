@@ -4,5 +4,54 @@
         <name>MAUI_calculator</name>
     </assembly>
     <members>
+        <member name="T:MAUI_calculator.ViewModel.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MAUI_calculator.ViewModel.MainViewModel.CurrentNumString">
+            <inheritdoc cref="F:MAUI_calculator.ViewModel.MainViewModel.currentNumString"/>
+        </member>
+        <member name="P:MAUI_calculator.ViewModel.MainViewModel.PreviousNumString">
+            <inheritdoc cref="F:MAUI_calculator.ViewModel.MainViewModel.previousNumString"/>
+        </member>
+        <member name="P:MAUI_calculator.ViewModel.MainViewModel.OutputString">
+            <inheritdoc cref="F:MAUI_calculator.ViewModel.MainViewModel.outputString"/>
+        </member>
+        <member name="F:MAUI_calculator.ViewModel.MainViewModel.selectNumberCommand">
+            <summary>The backing field for <see cref="P:MAUI_calculator.ViewModel.MainViewModel.SelectNumberCommand"/>.</summary>
+        </member>
+        <member name="P:MAUI_calculator.ViewModel.MainViewModel.SelectNumberCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MAUI_calculator.ViewModel.MainViewModel.SelectNumber"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentNumString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentNumString" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PreviousNumString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PreviousNumString" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OutputString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OutputString" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentNumString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentNumString" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PreviousNumString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PreviousNumString" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OutputString">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OutputString" generated properties.</summary>
+        </member>
     </members>
 </doc>
