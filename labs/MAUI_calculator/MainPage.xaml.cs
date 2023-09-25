@@ -24,10 +24,6 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InputState= StatesOfInput.Start;    // initialize at the starting state
-        inputString = "";                  // initialize all strings to empty and output to 0
-        resultString = "";
-        oper = "";
-        CalcOut.Text = "0";
         InitializeComponent();
     }
 
@@ -192,7 +188,7 @@ public partial class MainPage : ContentPage
                 break;
             case "-":
                 result = (prevNum - currentNum).ToString(); break;  // return difference of the two numbers
-            case "*":
+            case "x":
                 result = (prevNum * currentNum).ToString(); break;  // return product
             case "/":
                 if ((prevNum / currentNum) == double.NaN)           // if divide by zero
