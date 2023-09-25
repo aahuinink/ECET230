@@ -36,7 +36,8 @@
             <Button x:Name="button2nd"
 					Style="{x:StaticResource CalculatorBtn}"
 					Text="2nd"
-					WidthRequest="110">
+					WidthRequest="110"
+                    Clicked="SecondButton_clicked">
             </Button>
         </HorizontalStackLayout>
 
