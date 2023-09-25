@@ -1,9 +1,12 @@
-<mxfile host="Electron" modified="2023-09-24T22:49:33.671Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.243 Electron/25.3.1 Safari/537.36" etag="ag-shME1ZR8Yb2uHBT3s" version="21.6.5" type="device">
+<mxfile host="Electron" modified="2023-09-25T01:55:18.979Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.5 Chrome/114.0.5735.243 Electron/25.3.1 Safari/537.36" etag="2Yycapg4ExtfdtVhYoCh" version="21.6.5" type="device">
   <diagram name="Page-1" id="6VE5nw5R70v68YGsZUbK">
-    <mxGraphModel dx="989" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2049" dy="1194" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-129" value="" style="whiteSpace=wrap;html=1;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry width="1100" height="850" as="geometry" />
+        </mxCell>
         <mxCell id="2A6YWmVWUMF_fDWBWoBg-1" value="Start" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="490" y="150" width="120" height="60" as="geometry" />
         </mxCell>
@@ -106,13 +109,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2A6YWmVWUMF_fDWBWoBg-44" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;inputString = button.text&lt;br&gt;CalcOut = inputString&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-44" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;inputString = button.text&lt;br&gt;CalcOut = inputString&lt;br&gt;oper = &quot;&quot;&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="280" y="225" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="2A6YWmVWUMF_fDWBWoBg-54" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-47" target="2A6YWmVWUMF_fDWBWoBg-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="2A6YWmVWUMF_fDWBWoBg-47" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;resultString = &quot;&quot;&lt;br&gt;inputString = &quot;0&quot;&lt;br&gt;CalcOut = inputString&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-47" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;resultString = &quot;&quot;&lt;br&gt;inputString = &quot;&quot;&amp;nbsp;&lt;br&gt;CalcOut = &quot;0&quot;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="485" y="230" width="130" height="80" as="geometry" />
         </mxCell>
         <mxCell id="2A6YWmVWUMF_fDWBWoBg-105" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-55" target="2A6YWmVWUMF_fDWBWoBg-47">
@@ -131,10 +134,11 @@
         <mxCell id="2A6YWmVWUMF_fDWBWoBg-58" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;resultString = inputString&amp;nbsp;&lt;br&gt;inputString = &quot;&quot;&lt;br&gt;oper = button.text&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="145" y="520" width="150" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="2A6YWmVWUMF_fDWBWoBg-66" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-62" target="2A6YWmVWUMF_fDWBWoBg-3">
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-126" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-62" target="2A6YWmVWUMF_fDWBWoBg-3">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="630" y="720" />
+              <mxPoint x="480" y="720" />
+              <mxPoint x="470" y="690" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -184,7 +188,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2A6YWmVWUMF_fDWBWoBg-82" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;oper = button.text&lt;br&gt;inputString = &quot;0&quot;&lt;br&gt;CalcOut = inputString&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-82" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;oper = button.text&lt;br&gt;inputString = &quot;&quot;&lt;br&gt;CalcOut = &quot;0&quot;&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="560" y="490" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="2A6YWmVWUMF_fDWBWoBg-85" value="AwaitClear" style="whiteSpace=wrap;html=1;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;fillColor=default;" vertex="1" parent="1">
@@ -225,18 +229,25 @@
         <mxCell id="2A6YWmVWUMF_fDWBWoBg-94" value="&lt;b&gt;YES&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="705" y="680" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="2A6YWmVWUMF_fDWBWoBg-100" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-95" target="2A6YWmVWUMF_fDWBWoBg-4">
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-121" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-95" target="2A6YWmVWUMF_fDWBWoBg-120">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="780" y="520" />
+              <mxPoint x="750" y="550" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="2A6YWmVWUMF_fDWBWoBg-95" value="&lt;b&gt;NO&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="710" y="590" width="40" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-124" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-102" target="2A6YWmVWUMF_fDWBWoBg-123">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="2A6YWmVWUMF_fDWBWoBg-102" value="&lt;b&gt;Operator&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontFamily=Helvetica;fontColor=default;" vertex="1" parent="1">
-          <mxGeometry x="860" y="455" width="70" height="30" as="geometry" />
+          <mxGeometry x="930" y="410" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="2A6YWmVWUMF_fDWBWoBg-106" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-104" target="2A6YWmVWUMF_fDWBWoBg-47">
           <mxGeometry relative="1" as="geometry">
@@ -264,8 +275,24 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2A6YWmVWUMF_fDWBWoBg-110" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;resultString = &quot;&quot;&lt;br&gt;inputString = button.Text&lt;br&gt;CalcOut = inputString&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-110" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;resultString = &quot;&quot;&lt;br&gt;inputString = button.Text&lt;br&gt;oper = &quot;&quot;&lt;br&gt;CalcOut = inputString&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="805" y="195" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-122" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-120" target="2A6YWmVWUMF_fDWBWoBg-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-120" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;resultString = DoOperation()&lt;br&gt;inputString = &quot;&quot;&lt;br&gt;oper = &quot;&quot;&lt;br&gt;CalcOutc = resultString&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="792.5" y="510" width="155" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-127" style="edgeStyle=none;shape=connector;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;strokeColor=default;fontFamily=Helvetica;fontSize=11;fontColor=default;endArrow=classic;" edge="1" parent="1" source="2A6YWmVWUMF_fDWBWoBg-123" target="2A6YWmVWUMF_fDWBWoBg-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="690" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2A6YWmVWUMF_fDWBWoBg-123" value="&lt;span style=&quot;font-size: 8px;&quot;&gt;oper = button.text&lt;br&gt;inputString = &quot;&quot;&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="820" y="670" width="100" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
