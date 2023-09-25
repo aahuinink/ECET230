@@ -33,7 +33,7 @@ public partial class MainPage : ContentPage
 
     // --- CharButton_clicked --- //
     // Handles a character button click (0-9, '.')
-    private void CharButton_clicked(object sender, EventArgs e)    
+    private void CharButton_clicked(object sender, EventArgs e)
     {
         Button btn = (Button)sender;                // create a button object to store the sender info
         switch (InputState)                         // control switch case
@@ -99,6 +99,7 @@ public partial class MainPage : ContentPage
             default:
                 break;
         }
+        CalcOut.Text = "0";
     }
 
     // --- ClearButton_clicked --- //
@@ -116,6 +117,7 @@ public partial class MainPage : ContentPage
                 InputState = StatesOfInput.Start;
                 break;
             case StatesOfInput.Child:
+                CalcOut.Text = "0";
                 InputState = StatesOfInput.AwaitClear;
                 break;
             case StatesOfInput.Display:
@@ -139,7 +141,6 @@ public partial class MainPage : ContentPage
     // Handles the enter button action
     private void EnterButton_clicked(object obj, EventArgs e)
     {
-        Button button = (Button)obj;
         switch (InputState)
         {
             case StatesOfInput.Child:                       // if there's actually something to do
@@ -245,7 +246,6 @@ public partial class MainPage : ContentPage
                 oper = "";
                 InputState = StatesOfInput.Start; break;
         }
-
         return result;
     }
 
