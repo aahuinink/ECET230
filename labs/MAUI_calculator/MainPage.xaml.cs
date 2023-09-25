@@ -23,7 +23,7 @@ public partial class MainPage : ContentPage
     string inputString;         // store input
     string resultString;        // store result
     string oper;                // store operator
-    bool secondFlag = false;    // store if 2nd button has been clicked
+    bool secondFlag = true;    // store if 2nd button has been clicked
 
     public MainPage()
     {
