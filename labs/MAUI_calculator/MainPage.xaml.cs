@@ -1,5 +1,8 @@
 ﻿
 
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+
 namespace MAUI_calculator;
 
 
@@ -161,7 +164,7 @@ public partial class MainPage : ContentPage
 
     // --- SecondButton_clicked --- //
     // handles 2nd button click
-    private void SecondButton_clicked()
+    private void SecondButton_clicked(object sender, EventArgs e)
     {
         if (secondFlag)
         {
@@ -202,8 +205,20 @@ public partial class MainPage : ContentPage
         switch (oper)
         {
             case "+":
-                result = (prevNum + currentNum).ToString();         // return sum of the 2 numbers
-                break;
+                // RICK-ROLL EASTER EGG
+                if (prevNum == 2 & currentNum == 2) // ask stupid questions...
+                {
+                    OpenBrowser("https://www.youtube.com/watch?v=dQw4w9WgXcQ");  // get stupid answers :)
+                    CalcOut.Text = ":)";                // reset everything and send back to start
+                    inputString = "";
+                    resultString = "";
+                    oper = "";
+                    InputState = StatesOfInput.Start;
+                    break;
+                } else {
+                    result = (prevNum + currentNum).ToString();         // return sum of the 2 numbers
+                    break;
+                }
             case "-":
                 result = (prevNum - currentNum).ToString(); break;  // return difference of the two numbers
             case "x":
@@ -232,6 +247,36 @@ public partial class MainPage : ContentPage
         }
 
         return result;
+    }
+
+    // from Brock Allen for help with opening url :) https://stackoverflow.com/questions/14982746/open-a-browser-with-a-specific-url-by-console-application 
+    public static void OpenBrowser(string url)
+    {
+        try
+        {
+            Process.Start(url);
+        }
+        catch
+        {
+            // hack because of this: https://github.com/dotnet/corefx/issues/10361
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                url = url.Replace("&", "^&");
+                Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+                Process.Start("xdg-open", url);
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+            {
+                Process.Start("open", url);
+            }
+            else
+            {
+                throw;
+            }
+        }
     }
 }
 
