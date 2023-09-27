@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-25T02:06:29.080</Modified>
+      <Modified>2023-09-27T20:19:17.852</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-09-25T00:48:41.924</Modified>
+      <Modified>2023-09-27T20:19:17.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MAUI_calculator.runtimeconfig.json">
       <PackagePath>MAUI_calculator.runtimeconfig.json</PackagePath>
-      <Modified>2023-09-25T00:23:55.429</Modified>
+      <Modified>2023-09-27T19:59:08.232</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MAUI_calculator.dll">
       <PackagePath>MAUI_calculator.dll</PackagePath>
-      <Modified>2023-09-25T02:06:28.325</Modified>
+      <Modified>2023-09-27T20:19:16.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MAUI_calculator.exe</PackagePath>
-      <Modified>2023-09-25T02:06:28.382</Modified>
+      <Modified>2023-09-27T20:19:16.697</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MAUI_calculator.deps.json">
       <PackagePath>MAUI_calculator.deps.json</PackagePath>
-      <Modified>2023-09-25T00:23:55.414</Modified>
+      <Modified>2023-09-27T19:59:08.088</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.21\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

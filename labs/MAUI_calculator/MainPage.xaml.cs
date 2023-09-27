@@ -187,20 +187,22 @@ public partial class MainPage : ContentPage
         double currentNum;  // the current input number
 
         if(!double.TryParse(resultString, out prevNum)) {   // if the first entry can't be parsed
-            CalcOut.Text = "INVALID ENTRY";             // print out warning
             inputString = "";                           // reset all variables
             resultString = "";
             oper = "";
             InputState = StatesOfInput.Start;           // reset to starting state
+            result = "INVALID 1ST ENTRY";               // print out warning
+            return result;
         }
 
         if(!double.TryParse(inputString, out currentNum))   // if the second entry can't be parsed
         {   
-            CalcOut.Text = "INVALID ENTRY";             // print out warning
             inputString = "";                           // reset all variables
             resultString = "";
             oper = "";
             InputState = StatesOfInput.Start;           // reset to starting state
+            result = "INVALID 2ND ENTRY";               // print out warning
+            return result;
         }
 
         switch (oper)
@@ -221,13 +223,13 @@ public partial class MainPage : ContentPage
                     break;
                 }
             case "-":
-                result = (prevNum - currentNum).ToString(); break;  // return difference of the two numbers
+                result = (Math.Round(prevNum - currentNum, 5)).ToString(); break;  // return difference of the two numbers
             case "x":
                 result = (prevNum * currentNum).ToString(); break;  // return product
             case "/":
                 if ((prevNum / currentNum) == double.NaN)           // if divide by zero
                 {
-                    CalcOut.Text = "DIV BY 0 ERROR";                // print out warning to user
+                    result = "Err - DIV BY 0";                  // print out warning to user
                     inputString = "";                           // reset all variables
                     resultString = "";
                     oper = "";
@@ -240,7 +242,7 @@ public partial class MainPage : ContentPage
             case "^":
                 result = (Math.Pow(prevNum, currentNum)).ToString(); break; // return power
             default:
-                CalcOut.Text = "INVALID";
+                CalcOut.Text = "Err";
                 inputString = "";
                 resultString = "";
                 oper = "";
