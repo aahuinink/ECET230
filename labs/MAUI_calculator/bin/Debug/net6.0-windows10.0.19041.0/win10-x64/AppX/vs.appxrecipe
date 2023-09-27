@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\a_hui\source\repos\ECET230\labs\MAUI_calculator\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-27T20:19:17.852</Modified>
+      <Modified>2023-09-27T21:58:48.244</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
