@@ -48,7 +48,7 @@ namespace MeadowEdgeASketch
             graphics = new MicroGraphics(st7789);
             graphics.Clear(true);
             graphics.DrawRectangle(0, 0, 240, 240, Color.White, true);
-            graphics.DrawRectangle(x, y, x+4, y+4, Color.Red);
+            graphics.DrawPixel(x, y, Color.Red);
             graphics.Show();
 
             x = graphics.Width / 2;
