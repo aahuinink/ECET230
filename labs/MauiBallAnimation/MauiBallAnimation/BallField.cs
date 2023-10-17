@@ -16,7 +16,7 @@ public class BallField :IDrawable //
 
     public void Draw(ICanvas canvas, RectF dirtyRect)
     {
-        ball.Advance(25, 1000, 1000);
+        ball.Advance(2, 1000, 1000);
         ball.Draw(canvas);
     }
 }
