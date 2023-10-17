@@ -6,7 +6,7 @@
              Loaded="ContentPage_Loaded">
 
     <ContentPage.Resources>
-        <drawable:GraphicsDrawable x:Key="ballField" />
+        <drawable:BallField x:Key="ballField" />
     </ContentPage.Resources>
     <VerticalStackLayout>
         <GraphicsView Drawable="{StaticResource ballField}"
