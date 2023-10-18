@@ -17,14 +17,14 @@ public partial class MainPage : ContentPage
 		timer = new Timer();			// create local instance of timer
 		timer.Interval = frameDuration; // set timer interval to the frame duration
 		timer.Elapsed += new ElapsedEventHandler(updateBallField);	// create event handler
-		timer.Start();		// start the timer
+		timer.Start();      // start the timer
     }
 
     private void updateBallField(object sender, ElapsedEventArgs e)
     {
         var graphicsView = this.BallGraphicsView;		// create a graphicsView instance fromt the xaml
-        //var ballFieldDrawable = (BallField)graphicsView.Drawable;
-        //ballFieldDrawable;
+        var ballFieldDrawable = (BallField)graphicsView.Drawable;
+		//ballFieldDrawable;
         graphicsView.Invalidate();	// invalidate to update
     }
 

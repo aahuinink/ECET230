@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-17T05:35:44.478</Modified>
+      <Modified>2023-10-18T18:56:57.739</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-17T05:35:44.162</Modified>
+      <Modified>2023-10-18T18:56:57.559</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiBallAnimation.runtimeconfig.json">
       <PackagePath>MauiBallAnimation.runtimeconfig.json</PackagePath>
-      <Modified>2023-10-17T05:35:43.932</Modified>
+      <Modified>2023-10-18T18:53:24.613</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiBallAnimation.dll">
       <PackagePath>MauiBallAnimation.dll</PackagePath>
-      <Modified>2023-10-17T05:35:42.637</Modified>
+      <Modified>2023-10-18T18:56:56.915</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MauiBallAnimation.exe</PackagePath>
-      <Modified>2023-10-17T05:35:42.689</Modified>
+      <Modified>2023-10-18T18:56:56.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiBallAnimation.deps.json">
       <PackagePath>MauiBallAnimation.deps.json</PackagePath>
-      <Modified>2023-10-17T05:35:43.829</Modified>
+      <Modified>2023-10-18T18:53:24.501</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\.nuget\packages\microsoft.netcore.app.runtime.win-x64\6.0.21\runtimes\win-x64\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
