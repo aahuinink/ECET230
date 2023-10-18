@@ -2,4 +2,4 @@
 .wsuo
 .dll
 .vsidx
-.vs/*
+*/.vs/*

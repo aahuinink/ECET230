@@ -17,7 +17,7 @@ public class BallField :IDrawable //
     {
         get { return _ballCount; }
         set { _ballCount = value;
-            newBalls(_ballCount);    // create new Balls array when the value of ball count is changed
+            NewBalls(_ballCount);    // create new Balls array when the value of ball count is changed
         }
     }
     private int _ballCount = 2;   // the number of balls on the screen, initialized to 2
@@ -66,14 +66,14 @@ public class BallField :IDrawable //
 
     public BallField()
     {
-        newBalls(_ballCount);    // create an array of size ballCount
+        NewBalls(_ballCount);    // create an array of size ballCount
     }
 
     /// <summary>
     /// Creates a new array of balls with the size of ballCount
     /// </summary>
     /// <param name="ballCount">The size of the Balls array</param>
-    private void newBalls(int ballCount)
+    private void NewBalls(int ballCount)
     {
         Balls=new Ball[ballCount];  // creates an array of size ballCount
         Random rand = new();        // create random number generator
@@ -102,7 +102,7 @@ public class BallField :IDrawable //
     }
 
     /// <summary>
-    /// Draws each ball in the Balls array
+    /// Creates each ball in the animation for each frame
     /// </summary>
     /// <param name="canvas">The canvas to draw to</param>
     /// <param name="dirtyRect">The physical properties of the canvas</param>
@@ -110,8 +110,8 @@ public class BallField :IDrawable //
     {
         foreach (Ball ball in Balls)
         {
-            ball.Advance(_ballSpeed*_frameRate, _width, _height);     // The number
-            ball.Draw(canvas);
+            ball.Advance(_ballSpeed, _frameRate, _width, _height);      // Advances the ball
+            ball.Draw(canvas);                                          // draws the ball
         }
     }
 }

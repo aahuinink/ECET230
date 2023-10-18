@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-18T22:31:14.799</Modified>
+      <Modified>2023-10-18T23:31:47.121</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-18T22:31:14.475</Modified>
+      <Modified>2023-10-18T23:19:03.516</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiBallAnimation.runtimeconfig.json">
       <PackagePath>MauiBallAnimation.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiBallAnimation.dll">
       <PackagePath>MauiBallAnimation.dll</PackagePath>
-      <Modified>2023-10-18T22:31:13.542</Modified>
+      <Modified>2023-10-18T23:31:46.328</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MauiBallAnimation.exe</PackagePath>
-      <Modified>2023-10-18T22:31:13.666</Modified>
+      <Modified>2023-10-18T23:31:46.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiBallAnimation.deps.json">
       <PackagePath>MauiBallAnimation.deps.json</PackagePath>
@@ -1083,23 +1083,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.088</Modified>
+      <Modified>2023-10-18T23:03:33.974</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.099</Modified>
+      <Modified>2023-10-18T23:03:33.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.113</Modified>
+      <Modified>2023-10-18T23:03:33.997</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.135</Modified>
+      <Modified>2023-10-18T23:03:34.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.216</Modified>
+      <Modified>2023-10-18T23:03:34.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -1111,207 +1111,207 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-10-17T05:35:42.250</Modified>
+      <Modified>2023-10-18T23:03:34.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.446</Modified>
+      <Modified>2023-10-18T23:03:34.282</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.454</Modified>
+      <Modified>2023-10-18T23:03:34.289</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.461</Modified>
+      <Modified>2023-10-18T23:03:34.297</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.472</Modified>
+      <Modified>2023-10-18T23:03:34.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.518</Modified>
+      <Modified>2023-10-18T23:03:34.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.313</Modified>
+      <Modified>2023-10-18T23:03:34.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.315</Modified>
+      <Modified>2023-10-18T23:03:34.182</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.326</Modified>
+      <Modified>2023-10-18T23:03:34.190</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.318</Modified>
+      <Modified>2023-10-18T23:03:34.184</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.321</Modified>
+      <Modified>2023-10-18T23:03:34.186</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.296</Modified>
+      <Modified>2023-10-18T23:03:34.169</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.299</Modified>
+      <Modified>2023-10-18T23:03:34.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.310</Modified>
+      <Modified>2023-10-18T23:03:34.178</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.302</Modified>
+      <Modified>2023-10-18T23:03:34.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.304</Modified>
+      <Modified>2023-10-18T23:03:34.173</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.260</Modified>
+      <Modified>2023-10-18T23:03:34.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.264</Modified>
+      <Modified>2023-10-18T23:03:34.145</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.268</Modified>
+      <Modified>2023-10-18T23:03:34.148</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.271</Modified>
+      <Modified>2023-10-18T23:03:34.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.275</Modified>
+      <Modified>2023-10-18T23:03:34.154</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.278</Modified>
+      <Modified>2023-10-18T23:03:34.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.281</Modified>
+      <Modified>2023-10-18T23:03:34.157</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.293</Modified>
+      <Modified>2023-10-18T23:03:34.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.284</Modified>
+      <Modified>2023-10-18T23:03:34.160</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.288</Modified>
+      <Modified>2023-10-18T23:03:34.162</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.364</Modified>
+      <Modified>2023-10-18T23:03:34.217</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.369</Modified>
+      <Modified>2023-10-18T23:03:34.220</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.374</Modified>
+      <Modified>2023-10-18T23:03:34.224</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.380</Modified>
+      <Modified>2023-10-18T23:03:34.228</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.391</Modified>
+      <Modified>2023-10-18T23:03:34.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.345</Modified>
+      <Modified>2023-10-18T23:03:34.203</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.348</Modified>
+      <Modified>2023-10-18T23:03:34.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.351</Modified>
+      <Modified>2023-10-18T23:03:34.208</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.355</Modified>
+      <Modified>2023-10-18T23:03:34.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.360</Modified>
+      <Modified>2023-10-18T23:03:34.215</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.329</Modified>
+      <Modified>2023-10-18T23:03:34.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.332</Modified>
+      <Modified>2023-10-18T23:03:34.195</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.334</Modified>
+      <Modified>2023-10-18T23:03:34.196</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.337</Modified>
+      <Modified>2023-10-18T23:03:34.198</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.342</Modified>
+      <Modified>2023-10-18T23:03:34.202</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.395</Modified>
+      <Modified>2023-10-18T23:03:34.242</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.402</Modified>
+      <Modified>2023-10-18T23:03:34.245</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.409</Modified>
+      <Modified>2023-10-18T23:03:34.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.418</Modified>
+      <Modified>2023-10-18T23:03:34.258</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.439</Modified>
+      <Modified>2023-10-18T23:03:34.276</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.284</Modified>
+      <Modified>2023-10-18T23:03:34.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.291</Modified>
+      <Modified>2023-10-18T23:03:34.180</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.302</Modified>
+      <Modified>2023-10-18T23:03:34.189</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.316</Modified>
+      <Modified>2023-10-18T23:03:34.204</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiBallAnimation\MauiBallAnimation\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-10-17T05:35:42.349</Modified>
+      <Modified>2023-10-18T23:03:34.235</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

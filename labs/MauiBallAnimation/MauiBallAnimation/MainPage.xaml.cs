@@ -1,4 +1,5 @@
 ﻿using System.Timers;
+using System.Windows.Input;
 using Timer = System.Timers.Timer;
 
 namespace MauiBallAnimation;
@@ -13,6 +14,15 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+
+	/// ----- EVENT HANDLERS ----- ///
+	
+	/// <summary>
+	/// handles the content page loading event
+	/// </summary>
+	/// <param name="sender"></param>
+	/// <param name="e"></param>
 	private void ContentPage_Loaded(object sender, EventArgs e)
     {
         timer = new Timer();			// create local instance of timer
@@ -21,6 +31,11 @@ public partial class MainPage : ContentPage
 		timer.Start();      // start the timer
     }
 
+	/// <summary>
+	/// updates the ball field when the timer elapses
+	/// </summary>
+	/// <param name="sender"></param>
+	/// <param name="e"></param>
     private void updateBallField(object sender, ElapsedEventArgs e)
     {
 		var graphicsView = this.BallGraphicsView;
@@ -30,9 +45,15 @@ public partial class MainPage : ContentPage
 		ballView.Height = graphicsView.Height;
 		ballView.Height = graphicsView.Height;
 		
-        graphicsView.Invalidate();	// invalidate to update
+        graphicsView.Invalidate();  // invalidate to update
+		return;
     }
 
+	/// <summary>
+	/// Handles changing content page size event
+	/// </summary>
+	/// <param name="sender"></param>
+	/// <param name="e"></param>
     private void ContentPage_SizeChanged(object sender, EventArgs e)
     {
 		var graphicsView = this.BallGraphicsView;
@@ -46,8 +67,14 @@ public partial class MainPage : ContentPage
 		graphicsView.HeightRequest = Height;
 		ballFieldDrawable.Width = Width;
 		ballFieldDrawable.Height = Height;
+		return;
     }
 
+	/// <summary>
+	/// Ball speed entry text change event handler
+	/// </summary>
+	/// <param name="sender"></param>
+	/// <param name="e"></param>
     private void BallSpeed_Entry_TextChanged(object sender, TextChangedEventArgs e)
     {
 		var ballFieldDrawable = (BallField)this.BallGraphicsView.Drawable;		// create drawable
@@ -58,15 +85,20 @@ public partial class MainPage : ContentPage
             ballFieldDrawable.BallSpeed = speed;								// set the new speed
 			return;
 		}	
-		BallSpeed_Entry.Text = e.NewTextValue;									// otherwise just change the text
+		BallSpeed_Entry.Text = e.NewTextValue;                                  // otherwise just change the text
+		return;
     }
 
-
+	/// <summary>
+	/// handles a ball count entry text changed event
+	/// </summary>
+	/// <param name="sender"></param>
+	/// <param name="e"></param>
     private void BallCount_Entry_TextChanged(object sender, TextChangedEventArgs e)
     {
         var ballFieldDrawable = (BallField)this.BallGraphicsView.Drawable;	// create drawable
 		int count;															// create int to hold count value from entry
-		if( int.TryParse(e.NewTextValue,out count))							// if valid
+		if( int.TryParse(e.NewTextValue, out count))							// if valid
 		{
 			BallCount_Entry.Text = e.NewTextValue;							// change the text
 			ballFieldDrawable.BallCount = count;                            // set the new ball count
@@ -76,18 +108,26 @@ public partial class MainPage : ContentPage
 		ballFieldDrawable.BallCount = count; return;						// otherwise just change the text
     }
 
-    private void FrameRate_Entry_TextChanged(object sender, TextChangedEventArgs e)
+	/// <summary>
+	/// Handles the a new frame rate request from the user.
+	/// </summary>
+	/// <param name="sender"></param>
+	/// <param name="e"></param>
+    private void FrameRate_Entry_Completed(object sender, EventArgs e)
     {
 		var ballFieldDrawable = (BallField)this.BallGraphicsView.Drawable;
-		if(double.TryParse(e.NewTextValue, out frameDuration))      // if input is valid
+		double UserRequest;												// variable to hold user-requested frame rate
+		if(double.TryParse(((Entry)sender).Text, out UserRequest))		// if the user input is valid
 		{
-			timer.Interval = (frameDuration > 16) ? frameDuration : 16;         // set the timer interval to the new frame duration, minimum allowable is 16ms
+			frameDuration = (UserRequest > 16) ? UserRequest : 16;              // minimum duration is 16ms
+			timer.Interval = frameDuration;										// set timer interval to the frame duration         
 			FrameRate_Entry.Text = frameDuration.ToString();                    // set the text to the frame duration	
 			ballFieldDrawable.FrameRate = frameDuration;						// set the frame rate of the ball field to prevent ball slowdown as frame rate drops
 			return;	
         }
 
-		FrameRate_Entry.Text = frameDuration.ToString();			// otherwise just set to the current frame duration 
+		FrameRate_Entry.Text = frameDuration.ToString();            // otherwise just set to the current frame duration 
+		return;
     }
 }
 

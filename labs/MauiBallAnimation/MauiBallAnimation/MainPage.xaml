@@ -19,6 +19,9 @@
                    Text="10"
                    WidthRequest="20"
                    TextChanged="BallSpeed_Entry_TextChanged"/>
+            <Label Text="pixels/s"
+                   VerticalTextAlignment="Center"
+                   Margin="0,0,15,0"/>
             <Label Text="Ball Count:"
                    VerticalTextAlignment="Center"
                    Padding="10"/>
@@ -28,11 +31,12 @@
                    TextChanged="BallCount_Entry_TextChanged"/>
             <Label Text="Frame Duration"
                    VerticalTextAlignment="Center"
-                   Padding="10"/>
+                   Padding="10"
+                   Margin="15,0,0,0"/>
             <Entry x:Name="FrameRate_Entry"
                    Text="30"
                    WidthRequest="20"
-                   TextChanged="FrameRate_Entry_TextChanged"/>
+                   Completed="FrameRate_Entry_Completed"/>
             <Label Text="ms"
        VerticalTextAlignment="Center"/>
         </HorizontalStackLayout>

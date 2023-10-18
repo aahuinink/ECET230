@@ -90,8 +90,8 @@ public class Ball
     /// <param name="FrameDuration">The number of ms that have passed since the last frame</param>
     private void MoveBall(double BallSpeed, double FrameDuration)
     {
-        X += XVel * BallSpeed * FrameDuration;  // increases the x coordinate by the number of pixels since the last frame, weighted by the ball's velocity
-        Y += YVel * BallSpeed * FrameDuration;  // increases the y coordinate by the number of pixels since the last frame, weighted by the ball's velocity
+        X += XVel * BallSpeed * FrameDuration/1000.0;  // increases the x coordinate by the number of milli-pixels since the last frame, weighted by the ball's velocity
+        Y += YVel * BallSpeed * FrameDuration/1000.0;  // increases the y coordinate by the number of milli-pixels since the last frame, weighted by the ball's velocity
     }
 
     /// <summary>
