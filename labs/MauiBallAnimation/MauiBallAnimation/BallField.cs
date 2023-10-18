@@ -31,7 +31,7 @@ public class BallField :IDrawable //
         set { _ballSpeed = value;}
     }
 
-    private int _ballSpeed = 10;    // the relative speed of the ball in pixels per ms
+    private int _ballSpeed = 1000;    // the relative speed of the ball in pixels per ms
 
     /// <summary>
     /// The frame rate of the animation

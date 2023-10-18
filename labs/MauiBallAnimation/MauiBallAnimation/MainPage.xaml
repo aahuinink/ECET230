@@ -16,7 +16,7 @@
                    VerticalTextAlignment="Center"
                    Padding="10"/>
             <Entry x:Name="BallSpeed_Entry"
-                   Text="10"
+                   Text="1000"
                    WidthRequest="20"
                    TextChanged="BallSpeed_Entry_TextChanged"/>
             <Label Text="pixels/s"
