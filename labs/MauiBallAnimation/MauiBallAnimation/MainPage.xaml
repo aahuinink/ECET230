@@ -3,15 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:drawable="clr-namespace:MauiBallAnimation"
              x:Class="MauiBallAnimation.MainPage"
-             Loaded="ContentPage_Loaded">
+             Loaded="ContentPage_Loaded"
+             SizeChanged="ContentPage_SizeChanged">
 
     <ContentPage.Resources>
-        <drawable:BallField x:Key="ballField" />
+        <drawable:BallField x:Key="ballField"/> 
     </ContentPage.Resources>
     <VerticalStackLayout>
+        <HorizontalStackLayout x:Name="EntryBar"
+                               Padding="10">
+            <Label Text="Ball Speed:"
+                   VerticalTextAlignment="Center"
+                   Padding="10"/>
+            <Entry x:Name="BallSpeed_Entry"
+                   Text="10"
+                   WidthRequest="20"
+                   TextChanged="BallSpeed_Entry_TextChanged"/>
+            <Label Text="Ball Count:"
+                   VerticalTextAlignment="Center"
+                   Padding="10"/>
+            <Entry x:Name="BallCount_Entry"
+                   Text="2"
+                   WidthRequest="20"
+                   TextChanged="BallCount_Entry_TextChanged"/>
+            <Label Text="Frame Duration"
+                   VerticalTextAlignment="Center"
+                   Padding="10"/>
+            <Entry x:Name="FrameRate_Entry"
+                   Text="30"
+                   WidthRequest="20"
+                   TextChanged="FrameRate_Entry_TextChanged"/>
+            <Label Text="ms"
+       VerticalTextAlignment="Center"/>
+        </HorizontalStackLayout>
         <GraphicsView Drawable="{StaticResource ballField}"
                       x:Name="BallGraphicsView"
-                      HeightRequest="300"
-                      WidthRequest="400" />
+                      HorizontalOptions="Fill"
+                      VerticalOptions="Fill"/>
     </VerticalStackLayout>
 </ContentPage>
