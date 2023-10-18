@@ -5,6 +5,7 @@ namespace MauiBallAnimation;
 
 public partial class MainPage : ContentPage
 {
+	
 	private double frameDuration = 30;      // the frame duration in milliseconds
 	public Timer timer;						// the timer
 
@@ -25,9 +26,9 @@ public partial class MainPage : ContentPage
 		var graphicsView = this.BallGraphicsView;
 
 		var ballView = (BallField)graphicsView.Drawable;
-		ballView.width = graphicsView.Width;
-		ballView.height = graphicsView.Height;
-		ballView.height = graphicsView.Height;
+		ballView.Width = graphicsView.Width;
+		ballView.Height = graphicsView.Height;
+		ballView.Height = graphicsView.Height;
 		
         graphicsView.Invalidate();	// invalidate to update
     }
@@ -43,8 +44,8 @@ public partial class MainPage : ContentPage
 		}
 		graphicsView.WidthRequest = Width;
 		graphicsView.HeightRequest = Height;
-		ballFieldDrawable.width = Width;
-		ballFieldDrawable.height = Height;
+		ballFieldDrawable.Width = Width;
+		ballFieldDrawable.Height = Height;
     }
 
     private void BallSpeed_Entry_TextChanged(object sender, TextChangedEventArgs e)
@@ -54,7 +55,7 @@ public partial class MainPage : ContentPage
 		if(int.TryParse(e.NewTextValue, out speed))								// if valid input
 		{
             BallSpeed_Entry.Text = e.NewTextValue;								// change the text
-            ballFieldDrawable.ballSpeed = speed;								// set the new speed
+            ballFieldDrawable.BallSpeed = speed;								// set the new speed
 			return;
 		}	
 		BallSpeed_Entry.Text = e.NewTextValue;									// otherwise just change the text
@@ -77,10 +78,12 @@ public partial class MainPage : ContentPage
 
     private void FrameRate_Entry_TextChanged(object sender, TextChangedEventArgs e)
     {
+		var ballFieldDrawable = (BallField)this.BallGraphicsView.Drawable;
 		if(double.TryParse(e.NewTextValue, out frameDuration))      // if input is valid
 		{
 			timer.Interval = (frameDuration > 16) ? frameDuration : 16;         // set the timer interval to the new frame duration, minimum allowable is 16ms
 			FrameRate_Entry.Text = frameDuration.ToString();                    // set the text to the frame duration	
+			ballFieldDrawable.FrameRate = frameDuration;						// set the frame rate of the ball field to prevent ball slowdown as frame rate drops
 			return;	
         }
 

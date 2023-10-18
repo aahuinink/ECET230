@@ -28,18 +28,30 @@ public class Ball
         B = b;
     }
 
-    public void Advance(double ballSpeed, double width, double height)
+    /// <summary>
+    /// Moves the ball and performs any bounce operations
+    /// </summary>
+    /// <param name="BallSpeed"></param>
+    /// <param name="FrameDuration"></param>
+    /// <param name="Width"></param>
+    /// <param name="Height"></param>
+    public void Advance(double BallSpeed, double FrameDuration, double Width, double Height)
     {
-        MoveBall(ballSpeed);
-        Bounce(width, height);
+        MoveBall(BallSpeed, FrameDuration);
+        Bounce(Width, Height);
     }
 
-    private void Bounce(double width, double height)
+    /// <summary>
+    /// Identifies and handles when a ball should bounce
+    /// </summary>
+    /// <param name="Width">The width of the screen</param>
+    /// <param name="Height">The height of the screen</param>
+    private void Bounce(double Width, double Height)
     {
         double minX = Radius;           // minimum x value of the ball
         double minY = Radius;           // minimum y value of the ball
-        double maxX = width - Radius;   // maximum x value of the ball
-        double maxY = height - Radius;  // maximum y value of the ball
+        double maxX = Width - Radius;   // maximum x value of the ball
+        double maxY = Height - Radius;  // maximum y value of the ball
 
         // when ball reaches the left wall
         if(X < minX)
@@ -71,16 +83,25 @@ public class Ball
         }
     }
 
-    private void MoveBall(double ballSpeed)
+    /// <summary>
+    /// Moves the ball position
+    /// </summary>
+    /// <param name="BallSpeed">The relative ball speed selected by the user in pixels/ms</param>
+    /// <param name="FrameDuration">The number of ms that have passed since the last frame</param>
+    private void MoveBall(double BallSpeed, double FrameDuration)
     {
-        X += XVel * ballSpeed;
-        Y += YVel * ballSpeed;
+        X += XVel * BallSpeed * FrameDuration;  // increases the x coordinate by the number of pixels since the last frame, weighted by the ball's velocity
+        Y += YVel * BallSpeed * FrameDuration;  // increases the y coordinate by the number of pixels since the last frame, weighted by the ball's velocity
     }
 
+    /// <summary>
+    /// Draws the ball to the canvas
+    /// </summary>
+    /// <param name="canvas">The canvas that the objects should be drawn on</param>
     public void Draw(ICanvas canvas)
     {
-        canvas.FillColor = Color.FromRgb(R,G,B);
-        canvas.FillCircle((float)X, (float)Y, (float)Radius);
+        canvas.FillColor = Color.FromRgb(R,G,B);                // creates a colour from the ball's colour
+        canvas.FillCircle((float)X, (float)Y, (float)Radius);   // draws the ball
     }
 }
 
