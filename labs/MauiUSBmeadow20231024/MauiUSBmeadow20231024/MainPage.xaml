@@ -23,6 +23,32 @@
                             HorizontalOptions="Center"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Button x:Name="btnSend"
+                            Text="Send"
+                            Clicked="btnSend_Clicked"
+                            HorizontalOptions="Center"/>
+                    <Entry x:Name="entrySend"
+                           Text="###1111196"
+                           HorizontalOptions="Center"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Recieved Packet"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                    <CheckBox x:Name="chkbxHistory"
+                              IsChecked="True"
+                              VerticalOptions="Center"
+                              HorizontalOptions="Center"/>
+                </HorizontalStackLayout>
+                <ScrollView x:Name=" scrollViewRecData"
+                            MaximumHeightRequest="500"
+                            VerticalOptions="StartAndExpand"/>
+                <Label x:Name="labelRXdata"
+                       Text="Recieved Packet"
+                       MinimumWidthRequest="300"/>
+            </VerticalStackLayout>
         </HorizontalStackLayout>
     </ScrollView>
 

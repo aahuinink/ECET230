@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d5RCH6SKNKPfd4EYH3UOzwmPAfC07wAaGUlfFk0IsZcyIeuHiwlZq54wj6n1SN6HXb7KZXwrREYczWIe8yD1gg==",
+  "dgSpecHash": "mZIkzpZXZQajxnmkmTynoQfQXWVQ1P5ibCqZWGM0xulQytutG67ODq744hUDgzZc/oKLUSWj4TqzevBGG1nfYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\a_hui\\source\\repos\\ECET230\\labs\\MauiUSBmeadow20231024\\MauiUSBmeadow20231024\\MauiUSBmeadow20231024.csproj",
   "expectedPackageFiles": [
@@ -20,7 +20,14 @@
     "C:\\Users\\a_hui\\.nuget\\packages\\microsoft.maui.graphics.win2d.winui.desktop\\6.0.501\\microsoft.maui.graphics.win2d.winui.desktop.6.0.501.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\a_hui\\.nuget\\packages\\microsoft.windowsappsdk\\1.1.5\\microsoft.windowsappsdk.1.1.5.nupkg.sha512",
+    "C:\\Users\\a_hui\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\7.0.0\\runtime.linux-arm.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\a_hui\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\7.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\a_hui\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\7.0.0\\runtime.linux-x64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\a_hui\\.nuget\\packages\\runtime.native.system.io.ports\\7.0.0\\runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\a_hui\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\7.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
+    "C:\\Users\\a_hui\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\7.0.0\\runtime.osx-x64.runtime.native.system.io.ports.7.0.0.nupkg.sha512",
     "C:\\Users\\a_hui\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\a_hui\\.nuget\\packages\\system.io.ports\\7.0.0\\system.io.ports.7.0.0.nupkg.sha512",
     "C:\\Users\\a_hui\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\a_hui\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
     "C:\\Users\\a_hui\\.nuget\\packages\\xamarin.android.glide\\4.12.0.8\\xamarin.android.glide.4.12.0.8.nupkg.sha512",

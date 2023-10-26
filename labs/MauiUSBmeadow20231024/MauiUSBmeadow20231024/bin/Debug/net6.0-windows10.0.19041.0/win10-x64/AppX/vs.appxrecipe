@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-25T01:32:17.816</Modified>
+      <Modified>2023-10-25T01:40:19.086</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-10-25T01:32:17.541</Modified>
+      <Modified>2023-10-25T01:40:18.904</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiUSBmeadow20231024.runtimeconfig.json">
       <PackagePath>MauiUSBmeadow20231024.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiUSBmeadow20231024.dll">
       <PackagePath>MauiUSBmeadow20231024.dll</PackagePath>
-      <Modified>2023-10-25T01:32:15.912</Modified>
+      <Modified>2023-10-25T01:40:18.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MauiUSBmeadow20231024.exe</PackagePath>
-      <Modified>2023-10-25T01:32:15.971</Modified>
+      <Modified>2023-10-25T01:40:18.274</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiUSBmeadow20231024.deps.json">
       <PackagePath>MauiUSBmeadow20231024.deps.json</PackagePath>
