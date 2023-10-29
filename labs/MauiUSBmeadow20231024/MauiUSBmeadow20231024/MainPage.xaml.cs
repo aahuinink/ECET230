@@ -7,23 +7,17 @@ public partial class MainPage : ContentPage
 {
     // global class variables
     private bool bPortOpen=false;
-    private string newPacket = "";
-    private int oldPacketNumber = -1;
-    private int newPacketNumber = 0;
-    private int recPacketCount = 0;
-    private int lostPacketCount = 0;
-    private int packetCountRollovers = 0;
-    private int chkSumErrors = 0;
-    private int lengthErrors = 0;
 
     SerialPort serialPort = new SerialPort();
+    Packet packet = new Packet(3, 1000);
 
-	public MainPage()
+    public MainPage()
 	{
 		InitializeComponent();
         string[] ports = SerialPort.GetPortNames();
         pkrComPort.ItemsSource = ports;
         pkrComPort.SelectedIndex = ports.Length;
+        
         Loaded += MainPage_Loaded;
 	}
 
@@ -47,7 +41,6 @@ public partial class MainPage : ContentPage
     private void MyMainThreadCode()
     {
         //local variables
-        int calChkSum = 0;
         string parsedData;
 
         // Toogle Packet history
@@ -60,9 +53,9 @@ public partial class MainPage : ContentPage
         }
 
         // if the packet length is correct
-        if(newPacket.Length == 38)
+        if(newPacket.Length == errChk.ExpectedPacketLength)
         {
-            // if the packet header is correct
+            // if the packet _header is correct
             if (newPacket.Substring(0, 3) == "###")
             {
                 // parse the data into the parsedData string
@@ -85,23 +78,18 @@ public partial class MainPage : ContentPage
                 {
                     labelParsedData.Text = parsedData;
                 }
-
-                
-
-            } else
+            }
+            else
             {
-                corruptPacketCount++;
+                errChk.HeaderErrors++;
             }
         }
-        // if there is data missing from/added to the packetcle
         else
         {
-            corruptPacketCount++;
+            errChk.LengthErrors++;
         }
 
         // update the packet error data
-        ecCorrupted.Text = corruptPacketCount.ToString();
-        ecLost.Text = lostPacketCount.ToString();
     }
 
     private void btnOpenClose_Clicked(object sender, EventArgs e)
