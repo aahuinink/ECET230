@@ -12,9 +12,9 @@ public partial class MainPage : ContentPage
     private int newPacketNumber = 0;
     private int recPacketCount = 0;
     private int lostPacketCount = 0;
-    private int packetRollover = 0;
-    private int chkSumError = 0;
-    private int corruptPacketCount = 0;
+    private int packetCountRollovers = 0;
+    private int chkSumErrors = 0;
+    private int lengthErrors = 0;
 
     SerialPort serialPort = new SerialPort();
 
@@ -65,6 +65,7 @@ public partial class MainPage : ContentPage
             // if the packet header is correct
             if (newPacket.Substring(0, 3) == "###")
             {
+                // parse the data into the parsedData string
                 parsedData = $"" +
                     $"{newPacket.Length,-16}" +
                     $"{newPacket.Substring(0,3),-16}" +
@@ -84,10 +85,9 @@ public partial class MainPage : ContentPage
                 {
                     labelParsedData.Text = parsedData;
                 }
-                for (int i = 3; i < 34; i++)
-                {
-                    calChkSum += (byte)newPacket[i];
-                }
+
+                
+
             } else
             {
                 corruptPacketCount++;
