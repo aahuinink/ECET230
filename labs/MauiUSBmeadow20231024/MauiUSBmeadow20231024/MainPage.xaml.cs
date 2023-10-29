@@ -27,6 +27,20 @@ public partial class MainPage : ContentPage
     private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
     {
         newPacket = serialPort.ReadLine();
+        MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
+
+    }
+
+    private void MyMainThreadCode()
+    {
+        if(checkboxHistory.IsChecked)
+        {
+            labelRXdata.Text = newPacket + labelRXdata.Text;
+        } else
+        {
+            labelRXdata.Text = newPacket;
+        }
+        int calChkSum = 0;
     }
 
     private void btnOpenClose_Clicked(object sender, EventArgs e)

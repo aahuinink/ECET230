@@ -37,7 +37,7 @@
                     <Label Text="Recieved Packet"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
-                    <CheckBox x:Name="chkbxHistory"
+                    <CheckBox x:Name="checkboxHistory"
                               IsChecked="True"
                               VerticalOptions="Center"
                               HorizontalOptions="Center"/>
