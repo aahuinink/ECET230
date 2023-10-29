@@ -9,7 +9,8 @@ public partial class MainPage : ContentPage
     private bool bPortOpen=false;
 
     SerialPort serialPort = new SerialPort();
-    Packet packet = new Packet(3, 1000);
+    Packet recPacket = new Packet(headerLength: 3, expectedPacketLength: 38);
+    ErrorChecking errorChecking = new ErrorChecking(expectedPacketLength: 38);
 
     public MainPage()
 	{
@@ -30,7 +31,7 @@ public partial class MainPage : ContentPage
 
     private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
     {
-        packet.Contents = serialPort.ReadLine();
+        recPacket.Contents = serialPort.ReadLine();
         MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 
     }
@@ -43,53 +44,62 @@ public partial class MainPage : ContentPage
         //local variables
         string parsedData;
 
-        // Toogle Packet history
-        if (checkboxHistory.IsChecked)
+        // Do Error Checking:
+        // if the packet length is correct
+        if(recPacket.PacketLength != recPacket.ExpectedPacketLength)
         {
-            labelRXdata.Text = packet.Contents + labelRXdata.Text;
-        } else
-        {
-            labelRXdata.Text = packet.Contents;
+            errorChecking.LengthErrors++;
+            return;
         }
 
-        // if the packet length is correct
-        if(packet.Contents.Length == errChk.ExpectedPacketLength)
+        // incorrect header
+        if (recPacket.Header != "###")
         {
-            // if the packet _header is correct
-            if (packet.Contents.Substring(0, 3) == "###")
-            {
-                // parse the data into the parsedData string
-                parsedData = $"" +
-                    $"{packet.Contents.Length,-16}" +
-                    $"{packet.Contents.Substring(0,3),-16}" +
-                    $"{packet.Contents.Substring(3,3),-16}";
-                for (int i = 6; i < 34; i+=4)
-                {
-                    parsedData += $"{packet.Contents.Substring(i,4),-16}";
-                }
-                parsedData += $"{packet.Contents.Substring(34, 3)}\r\n";
+            errorChecking.HeaderErrors++;
+            return;
+        }
 
-                // Toggle parsed history
-                if (checkboxParsedHistory.IsChecked)
-                {
-                    labelParsedData.Text = parsedData + labelParsedData.Text;
-                }
-                else
-                {
-                    labelParsedData.Text = parsedData;
-                }
-            }
-            else
-            {
-                errChk.HeaderErrors++;
-            }
+        // checksum errors
+        if (recPacket.CalChecksum != recPacket.RecChecksum)
+        {
+            errorChecking.ChkSumErrors++;
+            return;
+        }
+
+        // if the packet passes error checking
+        // parse the data into the parsedData string
+        parsedData = $"" +
+            $"{recPacket.PacketLength,-16}" +
+            $"{recPacket.Header,-16}" +
+            $"{recPacket.PacketNumber,-16}";
+        for (int i = 0; i < recPacket.Contents.Length; i+=4)
+        {
+            parsedData += $"{recPacket.Contents.Substring(i,4),-16}";
+        }
+        parsedData += $"{recPacket.RecChecksum}\r\n";
+
+        // Toggle parsed history
+        if (checkboxParsedHistory.IsChecked)
+        {
+            labelParsedData.Text = parsedData + labelParsedData.Text;
         }
         else
         {
-            errChk.LengthErrors++;
+            labelParsedData.Text = parsedData;
         }
 
-        // update the packet error data
+        // Toggle Packet history
+        if (checkboxHistory.IsChecked)
+        {
+            labelRXdata.Text = recPacket.Contents + labelRXdata.Text;
+        }
+        else
+        {
+            labelRXdata.Text = recPacket.Contents;
+        }
+
+        // update the packet error data UI
+
     }
 
     private void btnOpenClose_Clicked(object sender, EventArgs e)

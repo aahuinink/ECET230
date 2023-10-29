@@ -22,6 +22,7 @@ namespace MauiUSBmeadow20231024
         private string  _contents;
         private string  _header;
         private int     _packetNumber;
+        private int     _expectedPacketLength;
         private int     _packetLength;
         private int     _recChecksum;
         private int     _calChecksum;
@@ -50,13 +51,13 @@ namespace MauiUSBmeadow20231024
             _headerLength = headerLength;
             Contents = contents;
             _direction = Direction.Send;
-            _packetLength = expectedPacketLength;
+            _expectedPacketLength = expectedPacketLength;
         }
 
         // ----- Encapsulation ----- //
 
         /// <summary>
-        /// The _contents of the packet
+        /// The contents of the packet
         /// </summary>
         public string Contents
         {
@@ -65,20 +66,32 @@ namespace MauiUSBmeadow20231024
             {
                 switch (_direction) {
                     case Direction.Recieve:
-                        _contents = value;
-                        _header = value[.._headerLength];
-                        _packetNumber = Convert.ToInt16(value.Substring(_headerLength, 3));
-                        _recChecksum = Convert.ToInt32(value.Substring(34, 3));
-                        for (int i = 3; i < 34; i++)
+                        _packetLength = value.Length;
+                        // pop out header
+                        _header = value[.._headerLength];          
+                        value = value.Substring(_headerLength);     
+                        // pop packet number
+                        _packetNumber = Convert.ToInt16(value.Substring(0, 3));
+                        value = value.Substring(3);
+                        // pop recieved checksum
+                        _recChecksum = Convert.ToInt32(value.Substring(value.Length-3));
+                        value = value.Substring(0, value.Length);
+
+                        // calculate checksum
+                        for (int i = 3; i < value.Length; i++)
                         {
                             _calChecksum += (byte)value[i];
                         }
+
+                        // set contents field
+                        _contents = value;
+
                         break;
+
                     default:
+                        _contents = value;
                         break;
                 }
-
-                
             }
         }
 
@@ -103,7 +116,7 @@ namespace MauiUSBmeadow20231024
         public string Header { get => _header; }
 
         /// <summary>
-        /// The length of the packet
+        /// The expected length of the contents of the packet
         /// </summary>
         public int PacketLength { get => _packetLength; }
 
@@ -116,5 +129,10 @@ namespace MauiUSBmeadow20231024
         /// The recieved checksum
         /// </summary>
         public int RecChecksum { get => _recChecksum; }
+
+        /// <summary>
+        /// The expected length of the packet
+        /// </summary>
+        public int ExpectedPacketLength { get => _expectedPacketLength; }
     }
 }
