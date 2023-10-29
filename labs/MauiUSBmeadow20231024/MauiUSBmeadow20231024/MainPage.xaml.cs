@@ -30,7 +30,7 @@ public partial class MainPage : ContentPage
 
     private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
     {
-        newPacket = serialPort.ReadLine();
+        packet.Contents = serialPort.ReadLine();
         MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 
     }
@@ -46,28 +46,28 @@ public partial class MainPage : ContentPage
         // Toogle Packet history
         if (checkboxHistory.IsChecked)
         {
-            labelRXdata.Text = newPacket + labelRXdata.Text;
+            labelRXdata.Text = packet.Contents + labelRXdata.Text;
         } else
         {
-            labelRXdata.Text = newPacket;
+            labelRXdata.Text = packet.Contents;
         }
 
         // if the packet length is correct
-        if(newPacket.Length == errChk.ExpectedPacketLength)
+        if(packet.Contents.Length == errChk.ExpectedPacketLength)
         {
             // if the packet _header is correct
-            if (newPacket.Substring(0, 3) == "###")
+            if (packet.Contents.Substring(0, 3) == "###")
             {
                 // parse the data into the parsedData string
                 parsedData = $"" +
-                    $"{newPacket.Length,-16}" +
-                    $"{newPacket.Substring(0,3),-16}" +
-                    $"{newPacket.Substring(3,3),-16}";
+                    $"{packet.Contents.Length,-16}" +
+                    $"{packet.Contents.Substring(0,3),-16}" +
+                    $"{packet.Contents.Substring(3,3),-16}";
                 for (int i = 6; i < 34; i+=4)
                 {
-                    parsedData += $"{newPacket.Substring(i,4),-16}";
+                    parsedData += $"{packet.Contents.Substring(i,4),-16}";
                 }
-                parsedData += $"{newPacket.Substring(34, 3)}\r\n";
+                parsedData += $"{packet.Contents.Substring(34, 3)}\r\n";
 
                 // Toggle parsed history
                 if (checkboxParsedHistory.IsChecked)

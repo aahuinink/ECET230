@@ -7,18 +7,53 @@ using Windows.ApplicationModel.Activation;
 
 namespace MauiUSBmeadow20231024
 {
+
+    enum Direction
+    {
+        Send,
+        Recieve,
+    }
+
     internal class Packet
     {
+        
+
+        private Direction _direction;
         private string  _contents;
-        private int     _packetNumber;
-        private int     _rolloverCount;
         private string  _header;
+        private int     _packetNumber;
+        private int     _packetLength;
+        private int     _recChecksum;
+        private int     _calChecksum;
 
-        private readonly int _packetLength;
         private readonly int _headerLength;
-        private readonly int _rolloverModulus;
-        private readonly int _checksum;
 
+        // ----- Constructors ----- //
+        /// <summary>
+        /// A packet object
+        /// </summary>
+        /// <param name="headerLength">The length of the _header (ex. "###" would be 3)</param>
+        public Packet(int headerLength, int expectedPacketLength)
+        {
+            _headerLength = headerLength;
+            _packetLength = expectedPacketLength;
+            _direction = Direction.Recieve;
+        }
+
+        /// <summary>
+        /// Constructs a packet object
+        /// </summary>
+        /// <param name="headerLength">The length of the _header</param>
+        /// <param name="contents">The _contents of the packet</param>
+        public Packet(int headerLength, string contents, int expectedPacketLength)
+        {
+            _headerLength = headerLength;
+            Contents = contents;
+            _direction = Direction.Send;
+            _packetLength = expectedPacketLength;
+        }
+
+        // ----- Encapsulation ----- //
 
         /// <summary>
         /// The _contents of the packet
@@ -28,14 +63,22 @@ namespace MauiUSBmeadow20231024
             get => _contents;
             set
             {
-                int oldPacketNum = _packetNumber;
-                _contents = value;
-                _header = value[.._headerLength];
-                _packetNumber = Convert.ToInt16(value.Substring(_headerLength, 3));
-                if(_packetNumber - oldPacketNum < 0)
-                {
-                    _rolloverCount++;
+                switch (_direction) {
+                    case Direction.Recieve:
+                        _contents = value;
+                        _header = value[.._headerLength];
+                        _packetNumber = Convert.ToInt16(value.Substring(_headerLength, 3));
+                        _recChecksum = Convert.ToInt32(value.Substring(34, 3));
+                        for (int i = 3; i < 34; i++)
+                        {
+                            _calChecksum += (byte)value[i];
+                        }
+                        break;
+                    default:
+                        break;
                 }
+
+                
             }
         }
 
@@ -50,19 +93,9 @@ namespace MauiUSBmeadow20231024
         public int HeaderLength { get => _headerLength; }
 
         /// <summary>
-        /// The recieved checksum
+        /// The calculated checksum
         /// </summary>
-        public int Checksum { get => _checksum; }
-
-        /// <summary>
-        /// The packet number resulting in a rollover
-        /// </summary>
-        public int RolloverModulus { get => _rolloverModulus; }
-
-        /// <summary>
-        /// The number of rollovers that have occured
-        /// </summary>
-        public int RolloverCount { get => _rolloverCount; }
+        public int CalChecksum { get => _calChecksum; }
 
         /// <summary>
         /// The packet header
@@ -74,27 +107,14 @@ namespace MauiUSBmeadow20231024
         /// </summary>
         public int PacketLength { get => _packetLength; }
 
-        // ----- Constructors ----- //
         /// <summary>
-        /// A packet object
+        /// The direction of the packet
         /// </summary>
-        /// <param name="headerLength">The length of the _header (ex. "###" would be 3)</param>
-        public Packet(int headerLength, int rolloverModulus, int packetLength)
-        {
-            _headerLength = headerLength;
-            _rolloverModulus = rolloverModulus;
-            _packetLength = packetLength;
-        }
+        public Direction Direction { get => _direction; }
 
         /// <summary>
-        /// A packet object
+        /// The recieved checksum
         /// </summary>
-        /// <param name="headerLength">The length of the _header</param>
-        /// <param name="contents">The _contents of the packet</param>
-        public Packet(int headerLength, string contents)
-        {
-            _headerLength = headerLength;
-            Contents = contents;
-        }
+        public int RecChecksum { get => _recChecksum; }
     }
 }
