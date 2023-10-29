@@ -6,3 +6,5 @@
 /.vs/
 submit_zips/
 **/Debug*
+**/obj*
+**/bin*
