@@ -93,7 +93,7 @@ public partial class MainPage : ContentPage
                 corruptPacketCount++;
             }
         }
-        // if there is data missing from/added to the packet
+        // if there is data missing from/added to the packetcle
         else
         {
             corruptPacketCount++;
