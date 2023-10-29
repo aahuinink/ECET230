@@ -20,10 +20,38 @@
                             Clicked="btnClear_Clicked"/>
                     <Picker x:Name="pkrComPort"
                             Title="Select COM Port"
-                            HorizontalOptions="Center"/>
+                            HorizontalOptions="Center"
+                            Margin="10,0,0,0"/>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
+            
+            <!-- Error Checking Data -->
+            <VerticalStackLayout x:Name="ErrorChecking">
+                <Label x:Name="ecTitle"
+                       Text="Packet Data"
+                       FontAttributes="Bold"
+                       Margin="0,0,0,10"/>
+                <HorizontalStackLayout>
+                    <VerticalStackLayout WidthRequest="100">
+                        <Label Text="Recieved"/>
+                        <Label Text="Lost"/>
+                        <Label Text="Corrupted"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="End">
+                        <Label x:Name="ecRecieved"
+                               Text="0"
+                               />
+                        <Label x:Name="ecLost"
+                               Text="0"/>
+                        <Label x:Name="ecCorrupted"
+                               Text="0"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            
+            <!-- Packet Data -->
             <VerticalStackLayout>
+                <!-- UI to send info-->
                 <HorizontalStackLayout>
                     <Button x:Name="btnSend"
                             Text="Send"
@@ -34,38 +62,51 @@
                            HorizontalOptions="Center"
                            WidthRequest="250"/>
                 </HorizontalStackLayout>
+
+                <!-- Packet History Checkboxes -->
                 <HorizontalStackLayout Margin="0,10,0,0">
                     <Label Text="Recieved Packet History"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
+                    
                     <CheckBox x:Name="checkboxHistory"
                               IsChecked="False"
                               VerticalOptions="Center"
                               HorizontalOptions="Center"/>
+                    
                     <Label Text="Parsed Data History"
-       HorizontalOptions="Center"
-       VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
                            Margin="10,0,0,0"/>
+
                     <CheckBox x:Name="checkboxParsedHistory"
                               IsChecked="False"
                               VerticalOptions="Center"
                               HorizontalOptions="Center"/>
                 </HorizontalStackLayout>
                 
-                
-                
-                <ScrollView x:Name=" scrollViewRecData"
-                            MaximumHeightRequest="500"
-                            VerticalOptions="StartAndExpand"/>
-                <Label x:Name="labelRXdata"
-                       Text="Recieved Packet"
-                       MinimumWidthRequest="300"/>
+                <!-- Received Packet History-->
+                <HorizontalStackLayout>
+                    <ScrollView x:Name=" scrollViewRecData"
+                                MaximumHeightRequest="500"
+                                VerticalOptions="StartAndExpand"/>         
 
+                    <Label Text="Recieved Packet: "
+                           Margin="0,0,10,10"
+                           FontAttributes="Bold"/>
+
+                    <Label x:Name="labelRXdata"
+                           Text="Recieved Packet"
+                           MinimumWidthRequest="300"
+                           HorizontalOptions="Center"/>
+                </HorizontalStackLayout>
+               
+                <!-- Parsed Packet History -->
                 <HorizontalStackLayout>
                     <Label Text="Length     Header      Number      Analog0      Analog1      Analog2      Analog3      Analog4      Analog5      Binary        CkSumRX"
-           HorizontalOptions="Center"
-           VerticalOptions="Center"/>
-                    
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           FontAttributes="Italic"/>
                 </HorizontalStackLayout>
                 
                 <ScrollView x:Name=" scrollViewParsedData"

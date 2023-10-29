@@ -5,15 +5,19 @@ namespace MauiUSBmeadow20231024;
 
 public partial class MainPage : ContentPage
 {
+    // global class variables
     private bool bPortOpen=false;
     private string newPacket = "";
     private int oldPacketNumber = -1;
     private int newPacketNumber = 0;
+    private int recPacketCount = 0;
     private int lostPacketCount = 0;
     private int packetRollover = 0;
     private int chkSumError = 0;
+    private int corruptPacketCount = 0;
 
     SerialPort serialPort = new SerialPort();
+
 	public MainPage()
 	{
 		InitializeComponent();
@@ -37,21 +41,28 @@ public partial class MainPage : ContentPage
 
     }
 
+    /// <summary>
+    /// Main code to be invoked by main thread
+    /// </summary>
     private void MyMainThreadCode()
     {
-        if(checkboxHistory.IsChecked)
+        //local variables
+        int calChkSum = 0;
+        string parsedData;
+
+        // Toogle Packet history
+        if (checkboxHistory.IsChecked)
         {
             labelRXdata.Text = newPacket + labelRXdata.Text;
         } else
         {
             labelRXdata.Text = newPacket;
         }
-        int calChkSum = 0;
-        string parsedData;
-        if(newPacket.Length > 37)
-        {
-            
 
+        // if the packet length is correct
+        if(newPacket.Length == 38)
+        {
+            // if the packet header is correct
             if (newPacket.Substring(0, 3) == "###")
             {
                 parsedData = $"" +
@@ -64,6 +75,7 @@ public partial class MainPage : ContentPage
                 }
                 parsedData += $"{newPacket.Substring(34, 3)}\r\n";
 
+                // Toggle parsed history
                 if (checkboxParsedHistory.IsChecked)
                 {
                     labelParsedData.Text = parsedData + labelParsedData.Text;
@@ -72,8 +84,24 @@ public partial class MainPage : ContentPage
                 {
                     labelParsedData.Text = parsedData;
                 }
+                for (int i = 3; i < 34; i++)
+                {
+                    calChkSum += (byte)newPacket[i];
+                }
+            } else
+            {
+                corruptPacketCount++;
             }
         }
+        // if there is data missing from/added to the packet
+        else
+        {
+            corruptPacketCount++;
+        }
+
+        // update the packet error data
+        ecCorrupted.Text = corruptPacketCount.ToString();
+        ecLost.Text = lostPacketCount.ToString();
     }
 
     private void btnOpenClose_Clicked(object sender, EventArgs e)

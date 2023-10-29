@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-10-29T18:19:55.651</Modified>
+      <Modified>2023-10-29T19:20:36.070</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiUSBmeadow20231024.dll">
       <PackagePath>MauiUSBmeadow20231024.dll</PackagePath>
-      <Modified>2023-10-29T18:19:54.238</Modified>
+      <Modified>2023-10-29T19:20:34.944</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\obj\Debug\net6.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MauiUSBmeadow20231024.exe</PackagePath>
-      <Modified>2023-10-29T18:19:54.309</Modified>
+      <Modified>2023-10-29T19:20:35.036</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\a_hui\source\repos\ECET230\labs\MauiUSBmeadow20231024\MauiUSBmeadow20231024\bin\Debug\net6.0-windows10.0.19041.0\win10-x64\MauiUSBmeadow20231024.deps.json">
       <PackagePath>MauiUSBmeadow20231024.deps.json</PackagePath>
