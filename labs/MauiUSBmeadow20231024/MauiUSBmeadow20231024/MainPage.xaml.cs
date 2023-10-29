@@ -1,6 +1,5 @@
 ﻿using System.IO.Ports;
 using System.Text;
-using CloudKit;
 
 namespace MauiUSBmeadow20231024;
 
@@ -8,6 +7,11 @@ public partial class MainPage : ContentPage
 {
     private bool bPortOpen=false;
     private string newPacket = "";
+    private int oldPacketNumber = -1;
+    private int newPacketNumber = 0;
+    private int lostPacketCount = 0;
+    private int packetRollover = 0;
+    private int chkSumError = 0;
 
     SerialPort serialPort = new SerialPort();
 	public MainPage()
