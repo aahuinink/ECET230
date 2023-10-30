@@ -9,7 +9,12 @@ public partial class MainPage : ContentPage
     private bool bPortOpen=false;
 
     private string recString;
+    private int currentPackNumber = 0;
+    private int rolloverCount = 0;
+    private int totalPackets = 0;
     SerialPort serialPort = new SerialPort();
+
+    ErrorChecking errorChecking = new ErrorChecking();
 
     public MainPage()
 	{
@@ -41,10 +46,8 @@ public partial class MainPage : ContentPage
     {
         //local variables
         string parsedData;
-        int currentPackNum;
         Packet packet = new Packet();
         List<PacketError> errors = new List<PacketError>();
-        ErrorChecking errorChecking = new ErrorChecking();
 
         // display recieved packet string
         // also toggle recieved packet history
@@ -94,8 +97,36 @@ public partial class MainPage : ContentPage
             labelParsedData.Text = parsedData;
         }
 
-        // update the packet error data UI
+        // check for lost packets and calculate total packets sent
+        int diff = packet.Number - (currentPackNumber%1000);
 
+        // lost packets, no rollover
+
+        if (diff > 1)
+        {
+            errorChecking.LostPacketCount += diff;
+            currentPackNumber = packet.Number;
+        } 
+        // lost packets and/or rollover
+        else if (diff < 1)
+        {
+            rolloverCount++;
+            errorChecking.LostPacketCount += (1000 - currentPackNumber) + packet.Number;
+            currentPackNumber = packet.Number;
+        }
+        // no lost packets or rollover
+        else
+        {
+            currentPackNumber = packet.Number;
+        }
+
+        //update UI with error/packet info
+        ecRecieved.Text = (currentPackNumber + 1000*rolloverCount).ToString();
+        ecLost.Text = errorChecking.LostPacketCount.ToString();
+        ecChecksum.Text = errorChecking.ChkSumErrors.ToString();
+        ecHeader.Text = errorChecking.HeaderErrors.ToString();
+        ecLength.Text = errorChecking.LengthErrors.ToString();
+        ecNumber.Text = errorChecking.NumberErrors.ToString();
     }
 
     private void btnOpenClose_Clicked(object sender, EventArgs e)

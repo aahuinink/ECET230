@@ -32,10 +32,13 @@
                        FontAttributes="Bold"
                        Margin="0,0,0,10"/>
                 <HorizontalStackLayout>
-                    <VerticalStackLayout WidthRequest="100">
+                    <VerticalStackLayout WidthRequest="150">
                         <Label Text="Recieved"/>
                         <Label Text="Lost"/>
-                        <Label Text="Corrupted"/>
+                        <Label Text="Checksum Error"/>
+                        <Label Text="Header Error"/>
+                        <Label Text="Length Error"/>
+                        <Label Text="Number Error"/>
                     </VerticalStackLayout>
                     <VerticalStackLayout HorizontalOptions="End">
                         <Label x:Name="ecRecieved"
@@ -43,8 +46,11 @@
                                />
                         <Label x:Name="ecLost"
                                Text="0"/>
-                        <Label x:Name="ecCorrupted"
+                        <Label x:Name="ecChecksum"
                                Text="0"/>
+                        <Label x:Name="ecHeader"/>
+                        <Label x:Name="ecLength"/>
+                        <Label x:Name="ecNumber"/>
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
