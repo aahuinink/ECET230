@@ -63,7 +63,7 @@ public partial class MainPage : ContentPage
         }
 
         // try parsing the recieved string into the packet object
-        errors = packet.TryParse(recString);
+        errors = packet.TryRXParse(recString);
 
         // handle errors
         if (errors.Count > 0)       // if there are errors

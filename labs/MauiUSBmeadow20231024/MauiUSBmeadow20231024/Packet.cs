@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,7 +36,7 @@ namespace MauiUSBmeadow20231024
         /// </summary>
         /// <param name="recieved">The recieved string to be parsed into the object</param>
         /// <returns>Packet</returns>
-        public List<PacketError> TryParse(string recieved)
+        public List<PacketError> TryRXParse(string recieved)
         {
             List<PacketError> errors = new List<PacketError>(); // create a new list of errors to hold any errors thrown
             recieved = recieved.TrimEnd('\r');
@@ -87,5 +88,28 @@ namespace MauiUSBmeadow20231024
 
             return errors;
         }
+
+
+        public void Send(string payload, SerialPort serialPort)
+        {
+            int chx = 0;                    // checksum variable
+            
+            // convert payload to bytes to calculate checksum
+            byte[] payloadByte = Encoding.UTF8.GetBytes(payload);
+            // calculate checksum
+            for (int i = 0; i < 4; i++)
+            {
+                chx += payloadByte[i];
+            }
+
+            // create packet string
+            string packetString = "###" + payload + chx.ToString() + "\r\n";
+
+            // put packetString into txBuffer
+            byte[] txBuffer = Encoding.UTF8.GetBytes(packetString);
+            // send txBuffer
+            serialPort.Write(txBuffer, 0, txBuffer.Length);
+            return;
+        }   
     }
 }
