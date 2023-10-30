@@ -1,4 +1,5 @@
 ﻿using System.IO.Ports;
+using System.Runtime.ExceptionServices;
 using System.Text;
 
 namespace MauiUSBmeadow20231024;
@@ -7,9 +8,10 @@ public partial class MainPage : ContentPage
 {
     // global class variables
     private bool bPortOpen=false;
-
-    private string recString;
-    private int currentPackNumber = 0;
+    private bool firstPack = false;         // is this the first packet recieved since opening the port?
+    private string recString;               // the string recieved from the meadow board
+    private int currentPackNumber = 0;      // the curretn packet number
+    private int packetCount = 0;
     private int rolloverCount = 0;
     private int totalPackets = 0;
     SerialPort serialPort = new SerialPort();
@@ -73,8 +75,14 @@ public partial class MainPage : ContentPage
             return; // exit thread since packet had errors
         }
 
-
         // if the packet passes error checking
+
+        // if it's the first packet since the port has been opened
+        if(firstPack)
+        {
+            firstPack = false;
+            currentPackNumber = packet.Number - 1; // to reconcile the packets recieved and the lost packet numbers
+        }
         // parse the data into the parsedData string
         parsedData = $"" +
             $"{packet.Length,-16}" +
@@ -105,6 +113,7 @@ public partial class MainPage : ContentPage
         if (diff > 1)
         {
             errorChecking.LostPacketCount += diff;
+            packetCount += diff;
             currentPackNumber = packet.Number;
         } 
         // lost packets and/or rollover
@@ -112,16 +121,18 @@ public partial class MainPage : ContentPage
         {
             rolloverCount++;
             errorChecking.LostPacketCount += (1000 - currentPackNumber) + packet.Number;
+            packetCount += (1000 - currentPackNumber) + packet.Number;
             currentPackNumber = packet.Number;
         }
         // no lost packets or rollover
         else
         {
             currentPackNumber = packet.Number;
+            packetCount++;
         }
 
         //update UI with error/packet info
-        ecRecieved.Text = (currentPackNumber + 1000*rolloverCount).ToString();
+        ecRecieved.Text = (packetCount + 1000*rolloverCount).ToString();
         ecLost.Text = errorChecking.LostPacketCount.ToString();
         ecChecksum.Text = errorChecking.ChkSumErrors.ToString();
         ecHeader.Text = errorChecking.HeaderErrors.ToString();
@@ -137,6 +148,7 @@ public partial class MainPage : ContentPage
             serialPort.Open();
             btnOpenClose.Text = "Close";
             bPortOpen = true;
+            firstPack = true;
             return;
         }
         serialPort.Close();
