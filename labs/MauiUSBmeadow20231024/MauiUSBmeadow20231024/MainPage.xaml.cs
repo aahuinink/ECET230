@@ -114,7 +114,6 @@ public partial class MainPage : ContentPage
         if (diff > 1)
         {
             errorChecking.LostPacketCount += diff;
-            packetCount += diff;
             currentPackNumber = packet.Number;
         } 
         // lost packets and/or rollover
