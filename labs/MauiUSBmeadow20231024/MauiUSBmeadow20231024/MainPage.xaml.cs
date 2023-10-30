@@ -10,7 +10,7 @@ public partial class MainPage : ContentPage
     private bool bPortOpen=false;
     private bool firstPack = false;         // is this the first packet recieved since opening the port?
     private string recString;               // the string recieved from the meadow board
-    private int currentPackNumber = 0;      // the curretn packet number
+    private int currentPackNumber = 0;      // the current packet number
     private int packetCount = 0;
     private int rolloverCount = 0;
     private int totalPackets = 0;
@@ -38,6 +38,7 @@ public partial class MainPage : ContentPage
     private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
     {
         recString = serialPort.ReadLine();
+       
         MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
     }
 
@@ -166,16 +167,14 @@ public partial class MainPage : ContentPage
     {
         try
         {
-            string messageOut = entrySend.Text;
-            messageOut += "\r\n";
-            byte[] messageBytes = Encoding.UTF8.GetBytes(messageOut);
-            serialPort.Write(messageBytes, 0, messageBytes.Length);
+            Packet outPacket = new Packet();            // create a packet object to send the user data in
+            string messageOut = entrySend.Text;         // get user input        
+            outPacket.Send(messageOut, serialPort);     // send the user data out of the serial port
         }
         catch(Exception ex)
         {
             DisplayAlert("Alert!", ex.ToString(), "OK");
         }
-        
     }
 }
 
