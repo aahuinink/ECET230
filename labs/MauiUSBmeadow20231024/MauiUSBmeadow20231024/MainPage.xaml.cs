@@ -8,14 +8,14 @@ namespace MauiUSBmeadow20231024;
 public partial class MainPage : ContentPage
 {
     // global class variables
-    private bool bPortOpen=false;
+    private bool bPortOpen=false;           // is a serial port open?
     private bool firstPack = false;         // is this the first packet recieved since opening the port?
     private string recString;               // the string recieved from the meadow board
     private int currentPackNumber = 0;      // the current packet number
-    private int packetCount = 0;
-    private int rolloverCount = 0;
+    private int packetCount = 0;            // the number of packets recieved
+    private int rolloverCount = 0;          // the number of times the packet count has rolled over that the application sees
     private int totalPackets = 0;
-    SerialPort serialPort = new SerialPort();
+    SerialPort serialPort = new SerialPort();   // serial port for connecting to the meadow board
 
     ErrorChecking errorChecking = new ErrorChecking();
 
@@ -29,6 +29,11 @@ public partial class MainPage : ContentPage
         Loaded += MainPage_Loaded;
 	}
 
+    /// <summary>
+    /// sets up serial port parameters upon page load
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void MainPage_Loaded(object sender, EventArgs e)
     {
         serialPort.BaudRate = 115200;
@@ -36,11 +41,16 @@ public partial class MainPage : ContentPage
         serialPort.DataReceived += SerialPort_DataReceived;
     }
 
+    /// <summary>
+    /// Event handler for when data is recieved from the meadow board.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void SerialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
     {
-        recString = serialPort.ReadLine();
+        recString = serialPort.ReadLine();                      // reads received string from meadow board
        
-        MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
+        MainThread.BeginInvokeOnMainThread(MyMainThreadCode);   // invokes main code on main thread
     }
 
     /// <summary>
