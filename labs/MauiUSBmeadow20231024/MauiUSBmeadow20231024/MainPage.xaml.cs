@@ -1,4 +1,5 @@
-﻿using System.IO.Ports;
+﻿using Microsoft.Maui.Controls.Compatibility;
+using System.IO.Ports;
 using System.Runtime.ExceptionServices;
 using System.Text;
 
@@ -73,7 +74,7 @@ public partial class MainPage : ContentPage
             {
                 errorChecking.Handle(error);
             }
-            return; // exit thread since packet had errors
+            return; // exit since packet had errors
         }
 
         // if the packet passes error checking
@@ -159,7 +160,9 @@ public partial class MainPage : ContentPage
 
     private void btnClear_Clicked(object sender, EventArgs e)
     {
-
+        string[] ports = SerialPort.GetPortNames();
+        pkrComPort.ItemsSource = ports;
+        pkrComPort.SelectedIndex = ports.Length;
     }
 
     private void btnSend_Clicked(object sender, EventArgs e)
