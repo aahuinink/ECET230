@@ -21,21 +21,42 @@ namespace MauiSolar
         private string _header;
         private int _number;
         private string _message;
+        private readonly int[] _analogValues;
         private int _checksum;
 
         public int Length { get => _length; set => _length = value; }
         public string Header { get => _header; set => _header = value; }
         public int Number { get => _number; set => _number = value; }
-        public string Message { get => _message; set => _message = value; }
-        public int Checksum { get => _checksum; set => _checksum = value; }
+        public string Message { 
+            get => _message;
+            set 
+            { 
+                _message = value;
 
+                for (byte i = 0; i < 5; i++)
+                {
+                    _analogValues[i] += Convert.ToInt32(value.Substring(i * 4, 4));
+                    i++;
+                }
+            }
+        }
+        public int Checksum { get => _checksum; set => _checksum = value; }
+        /// <summary>
+        /// The analog values from the
+        /// </summary>
+        public int[] AnalogValues { get => _analogValues; }
+
+        /// <summary>
+        /// Packet constructor
+        /// </summary>
         public Packet() { }
 
         /// <summary>
         /// Parses a string into a packet object and handles error checking
         /// </summary>
         /// <param name="recieved">The recieved string to be parsed into the object</param>
-        /// <returns>Packet</returns>
+        /// <returns>An array of all PacketErrors that occured during the parsing attempt.
+        /// The array is empty if the packet was successfully parsed</returns>
         public List<PacketError> TryRXParse(string recieved)
         {
             List<PacketError> errors = new List<PacketError>(); // create a new list of errors to hold any errors thrown

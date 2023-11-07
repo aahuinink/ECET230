@@ -24,15 +24,15 @@ namespace MauiSolar
         /// <summary>
         /// The panel voltage
         /// </summary>
-        public float PanelVoltage { get => _panelVoltage; set => _panelVoltage = value; }
+        public float PanelVoltage { get => _panelVoltage; }
         /// <summary>
         /// the panel current
         /// </summary>
-        public float PanelCurrent { get => _panelCurrent; set => _panelCurrent = value; }
+        public float PanelCurrent { get => _panelCurrent; }
         /// <summary>
         /// The battery/super cap voltage.
         /// </summary>
-        public float BatteryVoltage { get => _batteryVoltage; set => _batteryVoltage = value; }
+        public float BatteryVoltage { get => _batteryVoltage; }
         /// <summary>
         /// The battery/super cap current. Positive indicates charging.
         /// </summary>
