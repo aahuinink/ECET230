@@ -21,7 +21,7 @@ namespace MauiSolar
         private string _header;
         private int _number;
         private string _message;
-        private double[] _analogValues;
+        private double[] _analogValues = new double[5];
         private int _checksum;
 
         public int Length { get => _length; set => _length = value; }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace MauiSolar
 
@@ -13,7 +9,7 @@ namespace MauiSolar
         private double _ledResistor;
         private double _refVoltage;
         private double _adcResolution;
-        private double[] _analogValues;
+        private double[] _analogValues = new double[5];
         private double _panelVoltage;
         private double _panelCurrent;
         private double _batteryVoltage;
@@ -76,11 +72,11 @@ namespace MauiSolar
             {
                 _analogValues = value;
                 // convert analog values to current and voltage values
-                _panelVoltage = RefVoltage * _analogValues[0] / AdcResolution;     
-                _batteryVoltage = RefVoltage * _analogValues[2] / AdcResolution;
-                _batteryCurrent = RefVoltage * (_analogValues[1] - _analogValues[2]) / (BatteryResistor * AdcResolution);
-                _greenLEDCurrent = RefVoltage * (_analogValues[1] - _analogValues[3]) / (AdcResolution * LedResistor);
-                _redLEDCurrent = RefVoltage * (_analogValues[1] - _analogValues[4]) / (AdcResolution * LedResistor);
+                _panelVoltage = RefVoltage * value[0] / AdcResolution;
+                _batteryVoltage = RefVoltage * value[2] / AdcResolution;
+                _batteryCurrent = 1000 * RefVoltage * (value[1] - value[2]) / (BatteryResistor * AdcResolution);
+                _greenLEDCurrent = 1000 * RefVoltage * (value[1] - value[3]) / (AdcResolution * LedResistor);
+                _redLEDCurrent = 1000 * RefVoltage * (value[1] - value[4]) / (AdcResolution * LedResistor);
                 _panelCurrent = BatteryCurrent + GreenLEDCurrent + RedLEDCurrent;
                 _batteryStatus = (BatteryCurrent > 0) ? "Charging" : "Discharging";
             }

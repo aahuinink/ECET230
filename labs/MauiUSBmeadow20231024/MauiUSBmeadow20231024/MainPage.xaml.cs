@@ -14,7 +14,7 @@ public partial class MainPage : ContentPage
     private int currentPackNumber = 0;      // the current packet number
     private int packetCount = 0;            // the number of packets recieved
     private int rolloverCount = 0;          // the number of times the packet count has rolled over that the application sees
-    private int totalPackets = 0;
+    private Solar solar = new Solar(220.0, 220.0, 3.3, 4095.0);
     SerialPort serialPort = new SerialPort();   // serial port for connecting to the meadow board
 
     ErrorChecking errorChecking = new ErrorChecking();
@@ -107,6 +107,9 @@ public partial class MainPage : ContentPage
         }
         parsedData += $"{packet.Checksum}\r\n";
 
+        // update solar object with new analog values
+        solar.AnalogValues = packet.AnalogValues;
+
         // Toggle parsed history
         if (checkboxParsedHistory.IsChecked)
         {
@@ -142,6 +145,15 @@ public partial class MainPage : ContentPage
             packetCount++;
         }
 
+        // update UI with solar data
+        PanelVoltage.Text = Math.Round(solar.PanelVoltage, 2).ToString();
+        PanelCurrent.Text = Math.Round(solar.PanelCurrent).ToString();
+        BatteryVoltage.Text = Math.Round(solar.BatteryVoltage, 2).ToString();
+        BatteryCurrent.Text = Math.Round(solar.BatteryCurrent, 2).ToString();
+        BatteryStatus.Text = solar.BatteryStatus;
+        GreenLEDCurrent.Text = Math.Round(solar.GreenLEDCurrent, 2).ToString();
+        RedLEDCurrent.Text = Math.Round(solar.RedLEDCurrent, 2).ToString();
+
         //update UI with error/packet info
         ecRecieved.Text = (packetCount + 1000*rolloverCount).ToString();
         ecLost.Text = errorChecking.LostPacketCount.ToString();
@@ -172,7 +184,6 @@ public partial class MainPage : ContentPage
     {
         string[] ports = SerialPort.GetPortNames();
         pkrComPort.ItemsSource = ports;
-        pkrComPort.SelectedIndex = ports.Length;
     }
 
     private void btnSend_Clicked(object sender, EventArgs e)

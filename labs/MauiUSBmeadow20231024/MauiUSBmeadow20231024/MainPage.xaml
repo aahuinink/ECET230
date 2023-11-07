@@ -42,7 +42,7 @@
                         <Label Text="Green LED Current"/>
                     </VerticalStackLayout>
                     <VerticalStackLayout HorizontalOptions="End"
-                                         WidthRequest="50">
+                                         WidthRequest="100">
                         <Label x:Name="PanelVoltage"
                     Text="0"/>
                         <Label x:Name="PanelCurrent"
