@@ -25,12 +25,55 @@
                 </HorizontalStackLayout>
             </VerticalStackLayout>
             
-            <!-- Error Checking Data -->
-            <VerticalStackLayout x:Name="ErrorChecking">
+            <!-- Solar Data -->
+            <VerticalStackLayout x:Name="SolarData">
+                <Label x:Name="sdTitle"
+            Text="Solar Data"
+            FontAttributes="Bold"
+            Margin="0,0,0,10"/>
+                <HorizontalStackLayout>
+                    <VerticalStackLayout WidthRequest="150">
+                        <Label Text="Panel Voltage"/>
+                        <Label Text="Panel Current"/>
+                        <Label Text="Battery Voltage"/>
+                        <Label Text="Battery Current"/>
+                        <Label Text="Battery Status"/>
+                        <Label Text="Red LED Current"/>
+                        <Label Text="Green LED Current"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout HorizontalOptions="End"
+                                         WidthRequest="50">
+                        <Label x:Name="PanelVoltage"
+                    Text="0"/>
+                        <Label x:Name="PanelCurrent"
+                    Text="0"/>
+                        <Label x:Name="BatteryVoltage"
+                    Text="0"/>
+                        <Label x:Name="BatteryCurrent"
+                               Text="0"/>
+                        <Label x:Name="BatteryStatus"
+                               Text="---"/>
+                        <Label x:Name="RedLEDCurrent"
+                               Text="0"/>
+                        <Label x:Name="GreenLEDCurrent"
+                               Text="0"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout WidthRequest="30">
+                        <Label Text="V"/>
+                        <Label Text="mA"/>
+                        <Label Text="V"/>
+                        <Label Text="mA"/>
+                        <Label Text=" "/>
+                        <Label Text="mA"/>
+                        <Label Text="mA"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                
+            <!-- Error Checking -->
                 <Label x:Name="ecTitle"
-                       Text="Packet Data"
-                       FontAttributes="Bold"
-                       Margin="0,0,0,10"/>
+       Text="Error Data"
+       FontAttributes="Bold"
+       Margin="0,10,0,10"/>
                 <HorizontalStackLayout>
                     <VerticalStackLayout WidthRequest="150">
                         <Label Text="Recieved"/>
@@ -42,15 +85,17 @@
                     </VerticalStackLayout>
                     <VerticalStackLayout HorizontalOptions="End">
                         <Label x:Name="ecRecieved"
-                               Text="0"
-                               />
+               Text="0"/>
                         <Label x:Name="ecLost"
-                               Text="0"/>
+               Text="0"/>
                         <Label x:Name="ecChecksum"
+               Text="0"/>
+                        <Label x:Name="ecHeader"
                                Text="0"/>
-                        <Label x:Name="ecHeader"/>
-                        <Label x:Name="ecLength"/>
-                        <Label x:Name="ecNumber"/>
+                        <Label x:Name="ecLength"
+                               Text="0"/>
+                        <Label x:Name="ecNumber"
+                               Text="0"/>
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
