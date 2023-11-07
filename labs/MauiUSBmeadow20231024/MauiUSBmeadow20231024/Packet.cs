@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MauiUSBmeadow20231024
+namespace MauiSolar
 {
     enum PacketError 
     { 

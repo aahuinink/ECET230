@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace MauiUSBmeadow20231024;
+namespace MauiSolar;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

@@ -3,7 +3,7 @@ using System.IO.Ports;
 using System.Runtime.ExceptionServices;
 using System.Text;
 
-namespace MauiUSBmeadow20231024;
+namespace MauiSolar;
 
 public partial class MainPage : ContentPage
 {

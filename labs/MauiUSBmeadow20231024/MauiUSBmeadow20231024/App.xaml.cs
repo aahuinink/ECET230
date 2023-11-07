@@ -1,4 +1,4 @@
-﻿namespace MauiUSBmeadow20231024;
+﻿namespace MauiSolar;
 
 public partial class App : Application
 {

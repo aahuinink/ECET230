@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MauiUSBmeadow20231024;
+namespace MauiSolar;
 
 public class Program
 {
