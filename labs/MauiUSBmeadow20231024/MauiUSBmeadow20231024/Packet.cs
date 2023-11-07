@@ -21,7 +21,7 @@ namespace MauiSolar
         private string _header;
         private int _number;
         private string _message;
-        private readonly int[] _analogValues;
+        private double[] _analogValues;
         private int _checksum;
 
         public int Length { get => _length; set => _length = value; }
@@ -35,7 +35,7 @@ namespace MauiSolar
 
                 for (byte i = 0; i < 5; i++)
                 {
-                    _analogValues[i] += Convert.ToInt32(value.Substring(i * 4, 4));
+                    _analogValues[i] += Convert.ToDouble(value.Substring(i * 4, 4));
                     i++;
                 }
             }
@@ -44,7 +44,7 @@ namespace MauiSolar
         /// <summary>
         /// The analog values from the
         /// </summary>
-        public int[] AnalogValues { get => _analogValues; }
+        public double[] AnalogValues { get => _analogValues; }
 
         /// <summary>
         /// Packet constructor

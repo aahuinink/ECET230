@@ -9,49 +9,86 @@ namespace MauiSolar
 {
     internal class Solar
     {
-        private int[] _analogValues;
-        private float _panelVoltage;
-        private float _panelCurrent;
-        private float _batteryVoltage;
-        private float _batteryCurrent;
+        private double _batteryResistor;
+        private double _ledResistor;
+        private double _refVoltage;
+        private double _adcResolution;
+        private double[] _analogValues;
+        private double _panelVoltage;
+        private double _panelCurrent;
+        private double _batteryVoltage;
+        private double _batteryCurrent;
         private string _batteryStatus;
-        private float _redLEDCurrent;
-        private float _greenLEDCurrent;
+        private double _redLEDCurrent;
+        private double _greenLEDCurrent;
 
-        public Solar() { }
+        /// <summary>
+        /// Solar class constructor
+        /// </summary>
+        /// <param name="batteryResistor">The battery current limiting resistor value in ohms</param>
+        /// <param name="ledResistor">The LED current limiting resistor value in ohms</param>
+        /// <param name="refVoltage">The reference voltage used by the ADC</param>
+        /// <param name="adcResolution">The resolution of the ADC (2^n - 1, where n is the number of bits of the ADC)</param>
+        public Solar(double batteryResistor, double ledResistor, double refVoltage, double adcResolution)
+        {
+            _batteryResistor = batteryResistor;
+            _ledResistor = ledResistor;
+            _refVoltage = refVoltage;
+            _adcResolution = adcResolution;
+        }
 
         // ----- Encapsulations ----- //
         /// <summary>
         /// The panel voltage
         /// </summary>
-        public float PanelVoltage { get => _panelVoltage; }
+        public double PanelVoltage { get => _panelVoltage; }
         /// <summary>
         /// the panel current
         /// </summary>
-        public float PanelCurrent { get => _panelCurrent; }
+        public double PanelCurrent { get => _panelCurrent; }
         /// <summary>
         /// The battery/super cap voltage.
         /// </summary>
-        public float BatteryVoltage { get => _batteryVoltage; }
+        public double BatteryVoltage { get => _batteryVoltage; }
         /// <summary>
         /// The battery/super cap current. Positive indicates charging.
         /// </summary>
-        public float BatteryCurrent { get => _batteryCurrent; set => _batteryCurrent = value; }
+        public double BatteryCurrent { get => _batteryCurrent; }
         /// <summary>
         /// The charging status of the battery.
         /// </summary>
-        public string BatteryStatus { get => _batteryStatus; set => _batteryStatus = value; }
-        /// <summary>
+        public string BatteryStatus { get => _batteryStatus; }
+        /// <summary>   
         /// The current through the red LED.
         /// </summary>
-        public float RedLEDCurrent { get => _redLEDCurrent; set => _redLEDCurrent = value; }
+        public double RedLEDCurrent { get => _redLEDCurrent; }
         /// <summary>
         /// The current through the green LED.
         /// </summary>
-        public float GreenLEDCurrent { get => _greenLEDCurrent; set => _greenLEDCurrent = value; }
+        public double GreenLEDCurrent { get => _greenLEDCurrent; }
         /// <summary>
         /// Analog values from the meadow board.
         /// </summary>
-        public int[] AnalogValues { get => _analogValues; set => _analogValues = value; }
+        public double[] AnalogValues
+        {
+            get => _analogValues;
+            set
+            {
+                _analogValues = value;
+                // convert analog values to current and voltage values
+                _panelVoltage = RefVoltage * _analogValues[0] / AdcResolution;     
+                _batteryVoltage = RefVoltage * _analogValues[2] / AdcResolution;
+                _batteryCurrent = RefVoltage * (_analogValues[1] - _analogValues[2]) / (BatteryResistor * AdcResolution);
+                _greenLEDCurrent = RefVoltage * (_analogValues[1] - _analogValues[3]) / (AdcResolution * LedResistor);
+                _redLEDCurrent = RefVoltage * (_analogValues[1] - _analogValues[4]) / (AdcResolution * LedResistor);
+                _panelCurrent = BatteryCurrent + GreenLEDCurrent + RedLEDCurrent;
+                _batteryStatus = (BatteryCurrent > 0) ? "Charging" : "Discharging";
+            }
+        }
+
+        public double BatteryResistor { get => _batteryResistor; set => _batteryResistor = value; }
+        public double LedResistor { get => _ledResistor; set => _ledResistor = value; }
+        public double RefVoltage { get => _refVoltage; set => _refVoltage = value; }
+        public double AdcResolution { get => _adcResolution; set => _adcResolution = value; }
     }
 }
