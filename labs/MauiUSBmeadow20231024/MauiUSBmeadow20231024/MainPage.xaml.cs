@@ -225,6 +225,7 @@ public partial class MainPage : ContentPage
         loads[0] = (loads[0] == '1') ? '0' : '1';
 
         packet.Send(loads.ToString(), serialPort);
+        entrySend.Text = loads.ToString();
         btnGreenLED.Source = loads[0] == '0' ? "green_led.png" : "led_off.png";
         return;
     }
@@ -235,6 +236,12 @@ public partial class MainPage : ContentPage
     /// <param name="e"></param>
     private void btnRedLED_Clicked(object sender, EventArgs e)
     {
+        Packet packet = new Packet();
+        loads[1] = (loads[1] == '1') ? '0' : '1';
+
+        packet.Send(loads.ToString(), serialPort);
+        entrySend.Text = loads.ToString(); 
+        btnRedLED.Source = loads[1] == '0' ? "red_led.png" : "led_off.png";
         return;
     }
 }
