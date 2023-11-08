@@ -23,6 +23,23 @@
                             HorizontalOptions="Center"
                             Margin="10,0,0,0"/>
                 </HorizontalStackLayout>
+                <!-- Button Images -->
+                <HorizontalStackLayout Margin="0,10,0,0">
+                    <ImageButton x:Name="btnRedLED"
+                                 Source="led_off.png"
+                                 Clicked="btnRedLED_Clicked"/>
+                    <ImageButton x:Name="btnGreenLED"
+                                 Source="led_off.png"
+                                 Clicked="btnGreenLED_Clicked"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Margin="0,10,0,0">
+                    <Label Text="Red LED"
+                           WidthRequest="160"
+                           HorizontalTextAlignment="Center"/>
+                    <Label Text="Green LED"
+                           WidthRequest="170"
+                           HorizontalTextAlignment="Center"/>
+                </HorizontalStackLayout>
             </VerticalStackLayout>
             
             <!-- Solar Data -->

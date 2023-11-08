@@ -14,6 +14,7 @@ public partial class MainPage : ContentPage
     private int currentPackNumber = 0;      // the current packet number
     private int packetCount = 0;            // the number of packets recieved
     private int rolloverCount = 0;          // the number of times the packet count has rolled over that the application sees
+    private StringBuilder loads = new StringBuilder("1100");          // the loads info to send to the meadow board
     private Solar solar = new Solar(220.0, 220.0, 3.3, 4095.0);
     SerialPort serialPort = new SerialPort();   // serial port for connecting to the meadow board
 
@@ -163,6 +164,11 @@ public partial class MainPage : ContentPage
         ecNumber.Text = errorChecking.NumberErrors.ToString();
     }
 
+    /// <summary>
+    /// Closes the open serial port
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void btnOpenClose_Clicked(object sender, EventArgs e)
     {
         if (!bPortOpen)
@@ -180,12 +186,21 @@ public partial class MainPage : ContentPage
         return;
     }
 
+    /// <summary>
+    /// Refreshes the list of available serial ports.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void btnClear_Clicked(object sender, EventArgs e)
     {
         string[] ports = SerialPort.GetPortNames();
         pkrComPort.ItemsSource = ports;
     }
-
+    /// <summary>
+    /// Sends the text entered in the debugging entry box
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void btnSend_Clicked(object sender, EventArgs e)
     {
         try
@@ -198,6 +213,29 @@ public partial class MainPage : ContentPage
         {
             DisplayAlert("Alert!", ex.ToString(), "OK");
         }
+    }
+    /// <summary>
+    /// Toggles the green LED on D06
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void btnGreenLED_Clicked(object sender, EventArgs e)
+    {
+        Packet packet = new Packet();
+        loads[0] = (loads[0] == '1') ? '0' : '1';
+
+        packet.Send(loads.ToString(), serialPort);
+        btnGreenLED.Source = loads[0] == '0' ? "green_led.png" : "led_off.png";
+        return;
+    }
+    /// <summary>
+    /// Toggles the red LED on D07
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void btnRedLED_Clicked(object sender, EventArgs e)
+    {
+        return;
     }
 }
 
