@@ -48,6 +48,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\green_led.png" />
+	  <None Remove="Resources\Images\led_off.png" />
+	  <None Remove="Resources\Images\red_led.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="System.IO.Ports" Version="7.0.0" />
 	</ItemGroup>
 
