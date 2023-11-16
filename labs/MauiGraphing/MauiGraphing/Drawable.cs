@@ -38,6 +38,16 @@ namespace MauiGraphing
             }
         }
 
+        private void DrawBarGraph(ICanvas canvas, Rect lineGraphRect, BaseGraphData barGraph, int graphNumber)
+        {
+            int barWidth = 10;
+            int lineGraphWidth = 1000;
+            int barGraphLocation = lineGraphWidth + barWidth / 2 + graphNumber * barWidth;
+            int graphHeight = 500;
+            canvas.StrokeSize = barWidth;
+            canvas.DrawLine(barGraphLocation, graphHeight, barGraphLocation, barGraph.Yaxis);
+        }
+
         private void DrawLineGraph(ICanvas canvas, Rect lineGraphRect, BaseGraphData baseGraphData)
         {
             if(baseGraphData.Xaxis < 2)
