@@ -54,13 +54,17 @@ namespace MauiGraphing
             }
             else
             {
-                baseGraphData.PointArray[999] = baseGraphData.Yaxis;
-                for(int i = 0; i < baseGraphData.Xaxis -1; i++)
+                for(int i = 0; i <999; i++)
                 {
-                    canvas.StrokeColor = baseGraphData.LineColor;
-                    canvas.StrokeSize = baseGraphData.LineSize;
-                    canvas.DrawLine(i, baseGraphData.PointArray[i], i + 1, baseGraphData.PointArray[i+ 1]);
+                    baseGraphData.PointArray[i] = baseGraphData.PointArray[i + 1];
                 }
+                baseGraphData.PointArray[999] = baseGraphData.Yaxis;
+            }
+            for (int i = 0; i < baseGraphData.Xaxis - 1; i++)
+            {
+                canvas.StrokeColor = baseGraphData.LineColor;
+                canvas.StrokeSize = baseGraphData.LineSize;
+                canvas.DrawLine(i, baseGraphData.PointArray[i], i + 1, baseGraphData.PointArray[i + 1]);
             }
         }
     }
